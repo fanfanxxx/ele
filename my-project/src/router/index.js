@@ -16,8 +16,14 @@ import Fuwu from '../components/us/messages/fuwuzhongxin'
 
 import Fuwustate from '../components/us/messages/moneystate/fuwustate.vue'
 import Huxinxi from '../components/us/messages/huxinxi'
+//hcf部分 
+import Htakeout from '../components/vue-ele/htakeout'
+import Hfind from '../components/vue-ele/hfind'
+import Hsearch from '../components/vue-ele/hsearch'
+import Hmine from '../components/vue-ele/hmine'
+import Shopslist from  '../components/vue-ele/home/shopslist' 
 
-
+import Zzs from '../components/vue-ele/home/zzs'
 
 
 
@@ -74,6 +80,40 @@ export default new Router({
     },{
       path:"/profile/info",
       component:Huxinxi
-    }
+    },
+    //hcf部分 
+    {
+      //外卖页面
+      path: '/htakeout',
+      name: 'htakeout',
+      component: Htakeout
+    },
+    {
+      // 搜索页面
+       path: '/hsearch',
+      name: 'hsearch',
+       component: Hsearch
+     },{
+       //发现页面
+      path: '/hfind',
+      name: 'hfind',
+       component: Hfind
+     },{
+       //我的页面
+      path: '/hmine',
+      name: 'hmine',
+       component: Hmine
+     },{
+       //商铺列表页面
+      path: '/shopslist',
+      name: 'shopslist',
+       component:Shopslist
+     },
+       //商铺详情页面
+     {
+      path: '/zzs',
+      name: 'zzs',
+       component:Zzs
+     },
   ]
 })
