@@ -1,14 +1,21 @@
 <template>
     <div class="d-top">
-        <div  class="h-ding">订单列表</div> 
+            <Header>{{msg}}</Header>
         <Htotal></Htotal>
     </div>
 </template>
 <script>
+    import Header from "../us/header"
      import Htotal from "./htotal"
     export default{
         name:"hfind",
+        data(){
+           return{
+               msg:"订单列表"
+           }
+        },
         components:{
+            Header,
             Htotal 
         }
     }

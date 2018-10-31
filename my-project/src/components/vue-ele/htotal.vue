@@ -2,8 +2,8 @@
   <div class="h-total">
       <div class="h-botton">
     <router-link  class="h-link" to="/htakeout">
-      <ul  class="static" @click="wm">
-          <div >
+      <ul  class="static">
+          <div  @click="wm">
                 <li v-show="value1"><img src="./imgs/elm.png" alt=""></li>
                 <li v-show="!value1"><img src="./imgs/elm1.png" alt=""></li>
           </div>
@@ -12,8 +12,8 @@
       </ul>
     </router-link>
 <router-link   class="h-link" :to="{name:'hsearch'}" >
-    <ul class="static" @click="ss" >
-        <div >
+    <ul class="static"  >
+        <div @click="ss">
                 <li v-show="value2"><img src="./imgs/zhi.png" alt=""></li>
 
                  <li v-show="!value2"><img src="./imgs/zhi1.png" alt=""></li>
@@ -23,8 +23,8 @@
     </ul>
 </router-link >
 <router-link  class="h-link" :to="{name:'hfind'}">
-    <ul class="static" @click="fx">
-        <div >
+    <ul class="static" >
+        <div @click="fx">
                 <li v-show="value3"><img src="./imgs/order.png" alt=""></li>
                 <li  v-show="!value3"><img src="./imgs/order1.png" alt=""></li>
         </div>
@@ -34,8 +34,8 @@
     </ul>
 </router-link>
 <router-link  class="h-link" :to="{name:'hmine'}">
-    <ul class="static" @click="wd">
-        <div >
+    <ul class="static" >
+        <div @click="wd">
                 <li v-show="value4"><img src="./imgs/mine.png" alt=""></li>
                 <li v-show="!value4"><img src="./imgs/mine1.png" alt=""></li>
         </div>
@@ -52,10 +52,10 @@
         name:"htotal",
      data(){
          return{
-             value1:false,
-              value2:true,
-              value3:true,
-             value4:true
+             value1:null,
+              value2:null,
+              value3:null,
+             value4:null
          }
      },
      methods:{

@@ -1,15 +1,19 @@
 <template>
   <div id="app">
-    
+   
     <router-view/>
+    <!-- <Loading></Loading> -->
   </div>
 </template>
 
 <script>
-  import Htakeout from "./components/vue-ele/htakeout"
+  // import Htakeout from "./components/vue-ele/htakeout"
+  // import Loading from "./components/vue-ele/home/h-loading"
 export default {
-  name: 'App'
-  
+  name: 'App',
+  components: {
+    // Loading
+  }
 }
 </script>
 

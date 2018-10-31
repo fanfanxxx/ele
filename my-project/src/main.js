@@ -22,10 +22,11 @@ import {Plugin1} from './lib/request'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 
-import axios from 'axios'
-import VueAxios from 'vue-axios'
+import axios from 'axios';
+import VueAxios from 'vue-axios';
 //引入vuex-along模块
-
+//引入jq
+import $ from 'jquery'
 
 Vue.use(VueAxios, axios);
 axios.defaults.baseURL='/api'; 
@@ -43,16 +44,9 @@ Vue.use(Plugin1,66,666)
 
 Vue.use(VueAwesomeSwiper, /* { default global options } */)
 import { format } from 'path';
-
+Vue.prototype.bus = new Vue;
 
 //Vue.config.productionTip = false
-
-
-
-
-
-
-
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
