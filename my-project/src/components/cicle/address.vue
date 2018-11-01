@@ -1,19 +1,28 @@
 <template>
     <div>
-        <div class="z_address-header">
-           <h1> 
-               &lt;  
-               </h1>
-           <p>选择地址</p>
-           
-        </div>
-        <div class="z_address-top">
+        <Header>添加地址</Header>
+        <div class="z_add-top">
             <ul>
-                <li></li>
+                <li v-for="(item,index) in arrs" :key="index" >
+                  <section>
+                    <p>
+                      <span style="font-size:0.25rem;color:blue;margin-right:0.3rem">{{item.name}}</span>
+                      <span>{{item.max}}</span>
+                      </p>
+                      <p>
+                        联系电话:<span style="display:block;font-size:0.25rem;color:blue;margin-right:0.3rem">{{item.dianhua}}</span>
+                        备选电话:<span>{{item.beixuan}}</span>
+                      </p>
+                  </section>
+                  <section>
+                    <p>地址:{{item.song}}</p>
+                    <p><span  style="font-size:0.2rem;color:blue;margin-right:0.1rem">详细地址:</span>{{item.xiangxisong}}</p>
+                  </section>
+                  <p><span style="font-size:0.2rem;color:blue;margin-right:0.1rem">标签:</span><span>{{item.biaoqian}}</span></p>
+                </li>
             </ul>
             </div> 
-
-             <router-link to="/shop/payment/address/addlist"><div class="z_address-buttom">
+             <router-link to="/shop/payment/address/addlist"><div class="z_add-buttom">
           <i class="el-icon-circle-plus-outline" style="color:blue;font-size:0.3rem;margin-right:0.1rem;"></i><p>新增收货地址</p> 
             </div> </router-link>
          </div>
@@ -22,12 +31,24 @@
 
 </template>
 <script>
+import Header from "../us/header.vue";
 export default {
-  name: "address"
+  name: "add",
+  components:{
+    Header
+  },
+  methods: {
+   
+  },
+  computed: {
+     arrs(){
+       return this.$store.state.numss
+            }
+  }
 };
 </script>
 <style>
-.z_address-header {
+.z_add-header {
   width: 3.75rem;
   height: 0.45rem;
   background-color: blue;
@@ -35,7 +56,7 @@ export default {
   line-height: 0.45rem;
   /* border:1px solid red; */
 }
-.z_address-header p {
+.z_add-header p {
   position: absolute;
   right: 1rem;
   width: 1.75rem;
@@ -43,23 +64,39 @@ export default {
   /* border:1px solid red;  */
   font-size: 0.2rem;
 }
-.z_address-header h1 {
+.z_add-header h1 {
   position: absolute;
   left: 0.1rem;
   color: white;
   /* border:1px solid red; */
 }
-.z_address-header h4 {
+.z_add-header h4 {
   position: absolute;
   right: 0.1rem;
   color: white;
+  
+ 
   /* border:1px solid red; */
+
 }
-.z_address-top{
+.z_add-top{
      padding: 0.1rem;
      font-size:0.2rem;
+     margin-top:0.8rem; 
 }
-.z_address-buttom{
+.z_add-top li{
+  border: 1px solid red;
+  background: pink;
+  margin-bottom: 0.2rem;
+  padding: 0.1rem;
+}
+.z_add-top li p{
+  border: 1px solid red;
+  background: pink;
+  margin-bottom: 0.1rem;
+  padding: 0.1rem;
+}
+.z_add-buttom{
     width: 100%;
    position: absolute;
    bottom: 0;

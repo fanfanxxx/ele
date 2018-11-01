@@ -1,7 +1,7 @@
 <template>
     <div class="wrap">
        <div class="z_shop-header">
-           <h1> 
+           <h1 @click="tiao"> 
             &lt;  
                </h1>
            <p>好吃的</p>
@@ -39,13 +39,18 @@ export default {
        value5: 3.7,
     };
   },
-  create() {
+  created() {
     let api = "https://elm.cangdu.org/shopping/v2/menu?restaurant_id=1";
     this.$http.get(api).then(data => {
       // console.log(data);
       this.data = data.data;
       console.log(this.data[0].foods[0].attributes[0].icon_name);
     });
+  },
+  methods:{
+    tiao(){
+      this.$router.push('/shop');
+    }
   }
 };
 </script>

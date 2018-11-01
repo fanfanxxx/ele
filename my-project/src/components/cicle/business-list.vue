@@ -266,7 +266,7 @@ export default {
     //  console.log( this.$route.params);
     this.aaa = localStorage.shopid;
     let api =
-      "https://elm.cangdu.org/shopping/v2/menu?restaurant_id=1";
+      "https://elm.cangdu.org/shopping/v2/menu?restaurant_id="+this.aaa;
     let api01 =
       "https://elm.cangdu.org/shopping/restaurants?latitude=31.22967&longitude=121.4762";
     let api02 =
