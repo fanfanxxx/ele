@@ -59,6 +59,16 @@ export default{
         state.value4=false;
         state.value1=state.value2=state.value3=true
     },
+    //下拉部分
+    addnumber(state,n){
+     state.count1+=n
+    },
+    reducenumber(state,n){
+        state.count1-=n
+       },
+       clearnumber(state){
+         state.count1=0;
+       },
     //店铺详情模块
     addChange(state, num) {
         state.shopAdd = num;

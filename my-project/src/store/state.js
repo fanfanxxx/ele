@@ -15,4 +15,7 @@ export default{
   arrss:[],//购物车数组
   numbers:0,
   yin:false,
+  //下拉部分
+  count1:"",
+  
 }

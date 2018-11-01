@@ -108,12 +108,12 @@
         </div>
       </div>
       <!-- ---------------------------------- -->
-      <div v-show="value3">
+      <div v-show="value3" >
         <div class="s-list">
           <div >配送方式</div>
           <div @click="changeimg"  id="fengniao">
-             <li v-show="showimg" class="nimg1"><img src=".././imgs/niao.png" alt=""></li>
-             <li   v-show="!showimg " class="nimg2"><img src=".././imgs/duihao.png" alt=""></li>
+             <li v-show="showimg" class="nimg1" @click="addnumber1(1)"><img src=".././imgs/niao.png" alt=""></li>
+             <li   v-show="!showimg " class="nimg2"   @click="reducenumber0(1)"><img src=".././imgs/duihao.png" alt=""></li>
              <li  class="h-zs">蜂鸟专送</li>
              
           </div>
@@ -122,10 +122,10 @@
             <div v-for="(item,index) in shaixuandata"  > 
               <!-- <li>{{index}}</li> -->
              <div  class="h-sxall">
-                <li :style="{'color':'#'+item.icon_color,'border-color':'#'+item.icon_color}"   class="sxname"  @click="toggleShow(index)" v-show="!item.show" >
+                <li :style="{'color':'#'+item.icon_color,'border-color':'#'+item.icon_color}"   class="sxname"  @click="toggleShow(index,1)" v-show="!item.show "  >
                     {{item.icon_name}}</li>
                     <li class="h-truesigal"  v-show="item.show"
-                    ><img src=".././imgs/duihao.png" alt="" ></li>
+                    @click="reducenumber1(index,1)"><img src=".././imgs/duihao.png" alt="" ></li>
                     
                   <li class="h-namedetail">{{item.name}}</li>
             
@@ -136,8 +136,8 @@
             
           </div>
           <div id="sxbutton">
-            <li @click="hclear()">清空</li>
-            <li><span v-show="true" >(1)</span>确定</li>
+            <li @click="clear1">清空</li>
+            <li  @click="hsure"><span v-show="!count1==0" >({{count1}})</span>确定</li>
           </div>
         </div>
       </div>
@@ -162,6 +162,7 @@
 </template>
 <script>
   import Vue from 'vue'
+  import {mapState,mapMutations } from 'vuex'
   export default {
     name:"xiala2",
     props:['mes','changeid'],
@@ -185,9 +186,12 @@
       activeIndex: null,
       currentIndex:'-1',
       isindex:"",
-      chooseindex:0
+      chooseindex:0,
+      datashow:true
     }),
-    
+    computed:mapState({
+       count1:"count1"
+    }),
     methods: {
       //分类的点击
       fenlei: function() {
@@ -217,6 +221,7 @@
         this.num1=true;
         
         this.blue2=!this.blue2; this.blue=this.blue1=false;
+        this.$store.commit("clearnumber");  
       },
       list1: function(a,e) {
         this.value4 = false;
@@ -229,9 +234,6 @@
         //点击谁获得他的父级的元素 
         this.menu1=this.menudata[a].name
         console.log(this.menudata[a].name)
-        // var el=e.target
-        // console.log(el,"我我我我我我")
-        // $(e.target).attr("className","active");
         this.currentIndex = a;  
       },
       list2:function(parentname,name){
@@ -256,19 +258,45 @@
           
           console.log(this.isindex,"ffffff")
       },
+      //下拉
       changeimg:function(){
         this.showimg=!this.showimg
       },
-      toggleShow: function (index) {     
+      toggleShow: function (index,value) {     
          let newItem = this.shaixuandata[index]
         newItem.show = !this.shaixuandata[index].show
         Vue.set(this.shaixuandata, index, newItem)      // 一定要注意vue不能检测的几种数据变化情况包括数组和对象
-        this.isindex=index
-        console.log(this.isindex);
+        // this.isindex=index
+        console.log(index,"bbbbbbbb");
+        this.$store.commit("addnumber",value)
+        
       },
-      hclear(){
-        this.item.show=false;
-      }
+      
+      addnumber1(value){
+        this.$store.commit("addnumber",value)
+       
+      },
+      reducenumber0(value){
+        this.$store.commit("reducenumber",value)
+      },
+      reducenumber1(index,value){
+        // console.log(index,"hhhhhhh")
+        this.$store.commit("reducenumber",value)
+        let newItem2=this.shaixuandata[index];
+        newItem2.show=!this.shaixuandata[index].show;
+        Vue.set(this.shaixuandata, index, newItem2)  
+      },
+      hsure(){
+           this.value3=this.blue2=false;
+           this.num2=true;
+      },
+      clear1(){
+        this.$store.commit("clearnumber");  
+        // let newItem2=this.shaixuandata;
+        // newItem2.show=this.shaixuandata.show;
+        // Vue.set(this.shaixuandata, this.shaixuandata.show, newItem2)  
+        location.reload()
+      },
   },
     created(){
       var _this = this;

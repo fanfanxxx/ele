@@ -12,7 +12,7 @@
           </router-link>
           <router-link to="/login" class="h-top2" >
             <div class="h-login">
-                <span>登陆</span>
+                <span>登录</span>
                 <span>/</span>
                 <span>注册</span>
                 
