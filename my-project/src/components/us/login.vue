@@ -117,7 +117,7 @@ return{
             this.$store.commit('getmessage',res.data);
             // localStorage.obj=res.data;
             // console.log('aa', localStorage.obj);
-              // this.$router.go(-1);
+               this.$router.go(-1);
           }
 
           //给vuex保存用户信息
@@ -152,6 +152,7 @@ return{
     border-radius: 0.04rem;
     color: white;
     font-size: 0.16rem;
+    
 }
   .f_login_form {
     margin-top: 0.50rem;

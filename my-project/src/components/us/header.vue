@@ -8,6 +8,7 @@
       <!-- <span>搜索</span> -->
       <slot></slot>
     </div>
+    <slot name="bianji"></slot>
   </header>
 
 </template>

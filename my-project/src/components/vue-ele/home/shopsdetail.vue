@@ -1,13 +1,12 @@
 <template>
   <div class="all">
-
     <div class="h-line">
       <div class="h-logo">
         <img src="./himgs/logo.png" alt="">
       </div>
       <span class="shopers">附近商家</span>
     </div>
-    <router-link to="/zzs">
+    <router-link to="/shop">
 
       <div class="h-shopers" v-for="(shopsitem,index) in shopsData" :key="index">
 
@@ -82,9 +81,7 @@
   </div>
 </template>
 <script>
-  import {
-    Loading
-  } from 'element-ui';
+ 
   export default {
     name: "shopsdetail",
     data() {
@@ -92,36 +89,37 @@
         shopsData: [],
         value1: 4.5,
        onedata:'',
-       id:''
+       id:'',
+      
       }
 
     },
+    
     methods: {
       gozzs: function (index) {
         this.index = index;
+        localStorage.shopid=index;
         this.$router.push({
-          name: 'zzs',
+          name: 'business-list',
           params: {
             id: this.index
-          }
+          },
+        
         });
       }
     },
 
     created() {
-      //接口6
-      let loadingInstance1 = Loading.service({
-        fullscreen: true
-      });
+      
+      //接口6 
       let api = "https://elm.cangdu.org/shopping/restaurants?latitude=31.22967&longitude=121.4762";
       this.$http.get(api).then((data) => {
         //成功后的回调
-        loadingInstance1.close();
         console.log('成功了..');
         console.log(data.data, '1234567');
         this.shopsData = data.data;
         // console.log(this.shopsData[0])
-
+      
       })
 
     }
@@ -170,7 +168,7 @@
 
   .h-shopsimg img {
     width: 100%;
-    height: 100%;
+    height: 80%;
     margin-top: 5%;
     /* border: 1px solid red; */
   }
@@ -205,7 +203,7 @@
   
 
   .h-h2 {
-    width: 70%;
+    width: 60%;
     margin-top: 0.03px;
     position: absolute;
     left: 32%;
@@ -215,6 +213,7 @@
     padding-top: .01rem;
     font: .2rem/.2rem PingFangSC-Regular;
     font-weight: 700;
+    overflow: hidden;
   }
 
   .h-center {
@@ -306,12 +305,14 @@
     background-color: #3190e8;
     font-size: 0.07rem;
     margin-left: 10%;
+    color:white;
   }
 
   .h-ontime span:nth-child(2) {
     border: 1px solid #3190e8;
     border-radius: 0.02rem;
     font-size: 0.07rem;
+    color:#3190e8;
 
   }
 
@@ -336,12 +337,9 @@
   }
 
   .h-distance span:nth-child(3) {
-    color: blue;
+    color: #3190e8;
   }
 
-  .h-distance span:nth-child(3) {
-    color: blue;
-  }
 
 </style>
 <style>

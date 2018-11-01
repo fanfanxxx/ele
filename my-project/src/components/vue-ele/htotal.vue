@@ -3,7 +3,7 @@
       <div class="h-botton">
     <router-link  class="h-link" to="/htakeout">
       <ul  class="static">
-          <div  @click="wm">
+          <div  @click="wm1">
                 <li v-show="value1"><img src="./imgs/elm.png" alt=""></li>
                 <li v-show="!value1"><img src="./imgs/elm1.png" alt=""></li>
           </div>
@@ -13,7 +13,7 @@
     </router-link>
 <router-link   class="h-link" :to="{name:'hsearch'}" >
     <ul class="static"  >
-        <div @click="ss">
+        <div @click="ss1">
                 <li v-show="value2"><img src="./imgs/zhi.png" alt=""></li>
 
                  <li v-show="!value2"><img src="./imgs/zhi1.png" alt=""></li>
@@ -24,7 +24,7 @@
 </router-link >
 <router-link  class="h-link" :to="{name:'hfind'}">
     <ul class="static" >
-        <div @click="fx">
+        <div @click="fx1">
                 <li v-show="value3"><img src="./imgs/order.png" alt=""></li>
                 <li  v-show="!value3"><img src="./imgs/order1.png" alt=""></li>
         </div>
@@ -35,7 +35,7 @@
 </router-link>
 <router-link  class="h-link" :to="{name:'hmine'}">
     <ul class="static" >
-        <div @click="wd">
+        <div @click="wd1">
                 <li v-show="value4"><img src="./imgs/mine.png" alt=""></li>
                 <li v-show="!value4"><img src="./imgs/mine1.png" alt=""></li>
         </div>
@@ -48,33 +48,35 @@
   </div>
 </template>
 <script>
+    import {mapState,mapMutations } from 'vuex'
     export default{
         name:"htotal",
      data(){
          return{
-             value1:null,
-              value2:null,
-              value3:null,
-             value4:null
+            
          }
      },
+     computed:mapState({
+       value1:"value1",
+       value2:"value2",
+       value3:"value3",
+       value4:"value4",
+
+     }),
+    
      methods:{
-         wm:function(){
-             this.value1=false;
-             this.value2=this.value4=this.value3=true
-         },
-         ss:function(){
-             this.value2=false;
-             this.value1=this.value4=this.value3=true
-         },
-         fx:function(){
-             this.value3=false;
-             this.value1=this.value2=this.value4=true
-         },
-         wd:function(){
-             this.value4=false;
-             this.value1=this.value2=this.value3=true
-         }
+        wm1(){
+            this.$store.commit("wm")
+        },
+        ss1(){
+            this.$store.commit("ss")
+        },
+        fx1(){
+            this.$store.commit("fx")
+        },
+        wd1(){
+            this.$store.commit("wd")
+        },
      }
     
 }
@@ -84,19 +86,19 @@
         width: 100%;
         background-color: white;
         /* border: 1px solid red; */
-        height: 100%;
+        /* height: 100%; */
        
     }
   .h-botton
   {
       width: 100%;
-      height: 60px;
+      height: 0.6rem;
       display: flex;
       justify-content: flex-start;
-      position:fixed;
-      bottom:0;
+      /* position:fixed; */
+      /* bottom:0; */
       background-color: white;
-      z-index: 100;
+      /* z-index: 100; */
       /* border: 1px solid red; */
       /* border: 1px solid rgb(111, 22, 194); */
       

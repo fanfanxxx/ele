@@ -317,7 +317,7 @@
     width: 30%;
     height:0.6rem;
     line-height: 0.6rem;
-    font-size:0.2rem;
+    font-size:0.15rem;
     border-right: 1px solid gray;
   
    
@@ -612,8 +612,9 @@
    display: flex;
    border: 1px solid gray;
    border-radius: 0.03rem;
-   line-height: 0.5rem;
+   line-height: 0.4rem;
    position: relative;
+   font-size: 0.15rem
   
  }
  .sxname{
@@ -625,6 +626,7 @@
    height: 0.3rem;
    width: 20%;
    line-height: 0.3rem;
+   text-align: center
  }
  .h-truesigal{
   position: absolute;
@@ -650,7 +652,7 @@
    margin-left:30%;
  }
  #sxbutton{
-   height: 0.8rem;
+   height: 0.7rem;
    width: 100%;
     display: flex;
     justify-content: space-around;
@@ -658,12 +660,12 @@
  }
  #sxbutton li{
    width: 45%;
-   height: 0.6rem;
+   height: 0.5rem;
    /* border:1px solid red; */
-   font-size: 0.4rem;
+   font-size: 0.3rem;
    text-align: center;
   
-   margin-top: o.1rem;
+   margin-top: 0.1rem;
  }
  #sxbutton li:nth-child(1){
    background-color: white;
@@ -674,7 +676,10 @@
  #sxbutton li:nth-child(2){
    background-color:#56d176;
    color: white;
-   border-radius: 0.05rem
+   border-radius: 0.05rem;
+   height: 0.4rem;
+   line-height: 0.4rem;
+   margin-top: 0.2rem;
  }
  .class1{
    background-color: white;

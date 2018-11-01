@@ -5,7 +5,7 @@
 
     <div v-if="!getmessage">
       <section class="f_id">
-        <a href="####" class="f_id_include">
+        <a href="#/login" class="f_id_include">
           <span class="f_id_hair">
             <img src="./imgs/head.png" alt="">
           </span>
@@ -23,27 +23,27 @@
       </section>
       <section class="f_info_messages">
         <ul class="f_info_messages_ul">
-          <li>
+          <router-link tag="li" to="/balance">
             <div>
               <strong class="f_info_message1">0.00</strong><span>元</span>
             </div>
             <p>我的金额</p>
 
-          </li>
-          <li>
+          </router-link>
+          <router-link tag="li" to="/benefit">
             <div>
               <strong class="f_info_message2">0</strong><span>个</span>
             </div>
             <p>我的优惠</p>
 
-          </li>
-          <li>
+          </router-link>
+          <router-link tag="li" to="/points">
             <div>
               <strong class="f_info_message3">0</strong><span>分</span>
             </div>
             <p>我的积分</p>
 
-          </li>
+          </router-link>
         </ul>
 
       </section>
@@ -52,7 +52,7 @@
 
 
     <section class="f_ushome_center">
-      <a v-for="(item,index) in obj1" :key="index" :href="item.path" class="f_ushome_center_a">
+      <a v-for="(item,index) in obj1" :key="index" :href="'#'+item.path" class="f_ushome_center_a">
         <img :src="item.src" alt="">
         <div>
           <span>{{item.content}}</span>
@@ -63,7 +63,7 @@
     </section>
 
     <section class="f_ushome_center">
-      <a v-for="(item,index) in obj2" :key="index" :href="item.path" class="f_ushome_center_a">
+      <a v-for="(item,index) in obj2" :key="index" :href="'#'+item.path" class="f_ushome_center_a">
         <img :src="item.src" alt="">
         <div>
           <span>{{item.content}}</span>
@@ -97,7 +97,7 @@
         }, {
           src: require('./imgs/分期商城.png'),
           content: "积分",
-          path: '/order'
+          path: '/chome/index'
         }, {
           src: require('./imgs/王冠.png'),
           content: "饿了么会员卡",

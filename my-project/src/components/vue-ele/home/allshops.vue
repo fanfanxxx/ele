@@ -1,8 +1,8 @@
 <template>
   <div class="all">
-
-    <router-link to="/zzs">
-
+   <load v-if="num!=1"></load>
+    <router-link to="/shop">
+     
       <div class="h-shopers" v-for="(shopsitem,index) in data" :key="index">
         <div @click="gozzs(shopsData[index].id)">
           <div class="h-shopsimg">
@@ -67,26 +67,32 @@
   </div>
 </template>
 <script>
-  import {
-    Loading
-  } from 'element-ui';
+  // import {
+  //   Loading
+  // } from 'element-ui';
+  import load from '../../vue-ele/home/h-loading'
   export default {
     name: "allshops",
     props: ['mes', 'changeid'],
+    components:{
+         load
+    },
     data() {
       return {
-        shopsData: [],
-        value1: 4.5,
-        data: [],
-        id: ''
+        shopsData: [],   //商家所有信息
+        value1: 4.5,      //星星评分
+        data: [],         //排序时传入的重新刷新的数据
+         id: '',         // 传入商家详情的id
+        num:1           //loading是否完成
       }
 
     },
     methods: {
       gozzs: function (index) {
         this.index = index;
+        localStorage.shopid=index;
         this.$router.push({
-          name: 'zzs',
+          name: 'business-list',
           params: {
             id: this.index
           }
@@ -96,23 +102,26 @@
 
     created() {
       //接口6
-      let loadingInstance1 = Loading.service({
-        fullscreen: true
-      });
+      // let loadingInstance1 = Loading.service({
+      //   fullscreen: true
+      // });
+      this.num=this.num-1 
       let api = "https://elm.cangdu.org/shopping/restaurants?latitude=31.22967&longitude=121.4762";
       this.$http.get(api, {
         params: {
           order_by: ''
         }
       }).then((data) => {
-        loadingInstance1.close();
+        // loadingInstance1.close();
         //成功后的回调
         console.log('成功了..');
         console.log(data.data);
         this.shopsData = data.data;
         this.data = data.data;
-        console.log(this.id, "什么鬼")
-       // console.log(this.shopsData[0])
+        // console.log(this.id, "什么鬼")
+       // console.log(this.shopsData[0]);
+       //判断load结束
+       this.num=this.num+1;
       })
 
     },
@@ -170,7 +179,7 @@
 
   .h-shopsimg img {
     width: 100%;
-    height: 100%;
+    height: 80%;
     margin-top: 5%;
     /* border: 1px solid red; */
   }
@@ -205,7 +214,7 @@
   
 
   .h-h2 {
-    width: 70%;
+    width: 60%;
     margin-top: 0.03px;
     position: absolute;
     left: 32%;
@@ -215,6 +224,7 @@
     padding-top: .01rem;
     font: .2rem/.2rem PingFangSC-Regular;
     font-weight: 700;
+    overflow: hidden;
   }
 
   .h-center {
@@ -291,6 +301,7 @@
     display: flex;
     margin-top: 0.25rem;
     justify-content: space-around;
+    
 
   }
 
@@ -306,12 +317,14 @@
     background-color: #3190e8;
     font-size: 0.07rem;
     margin-left: 10%;
+    color:white;
   }
 
   .h-ontime span:nth-child(2) {
     border: 1px solid #3190e8;
     border-radius: 0.02rem;
     font-size: 0.07rem;
+    color:#3190e8; 
 
   }
 
@@ -336,12 +349,10 @@
   }
 
   .h-distance span:nth-child(3) {
-    color: blue;
+    color: #3190e8;
   }
 
-  .h-distance span:nth-child(3) {
-    color: blue;
-  }
+ 
 
 </style>
 <style>

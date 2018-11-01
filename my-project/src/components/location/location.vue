@@ -4,18 +4,20 @@
       <span id="f_head_left">
         ele.me
       </span>
-      <a href="#/login" id="f_head_right">
+      <a v-if="!user.username"  href="#/login" class="f_head_right">
         <span>
           登录|注册
         </span>
       </a>
+      <a v-else class="f_head_right" href="#/profile">
+      <img src="../us/imgs/头像.png" alt=""></a>
     </header>
     <nav class="f_city_nav">
       <div class="f_city_tip">
         <span class="f_city_tip_left">当前定位城市</span>
         <span class="f_city_tip_right">定位不准时请在城市列表中选择</span>
       </div>
-      <a href="####" class="f_guess_city" :href="'/#/city/'+city.id">
+      <a  class="f_guess_city" :href="'/#/city/'+city.id">
         <span>{{city.name}}</span>
         <span class="el-icon-arrow-right">
 
@@ -82,6 +84,11 @@
           return false;
         }
       }
+    },
+    computed:{
+      user(){
+        return this.$store.state.usermessage;
+      }
     }
 
   }
@@ -109,13 +116,16 @@
     transform: translateY(-50%);
   }
 
-  #f_head_right {
+  .f_head_right {
     color: white;
     font-size: 0.16rem;
     position: absolute;
     right: 0.09rem;
     top: 50%;
     transform: translateY(-50%);
+  }
+  .f_head_right>img{
+  width:0.3rem;
   }
 
   .f_city_nav {
@@ -153,6 +163,7 @@
   }
   .f_guess_city>span{
     font-size: 0.2rem;
+    color: #3190e8;
   }
 
   .el-icon-arrow-right {

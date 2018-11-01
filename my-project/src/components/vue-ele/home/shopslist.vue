@@ -1,10 +1,8 @@
 <template>
   <div class="h-shoplist">
-    <router-link to="/htakeout">
-      <div class="h-return">
-        <</div>
-    </router-link>
-    <div class="h-listTop">{{this.$route.params.title}}</div>
+    
+    <TopHeader class="h-listTop">{{title}}</TopHeader>
+    
 
 
     <Xiala :mes="list" :changeid="changeid" class="h-xiala"></Xiala>
@@ -14,9 +12,10 @@
     </div>
 </template>
 <script>
+  
   import Allshops from "./allshops";
   import Xiala from "./xiala";
-
+  import TopHeader from "../../us/header"
   export default {
     name: "shopslist",
     data() {
@@ -25,15 +24,19 @@
         shop: [],
         activeIndex: '1',
         message: '',
-        myid: ''
+        myid: '',
+        title:'',
+     
       }
     },
     components: {
       Allshops,
       Xiala,
-
+      TopHeader,
+       
     },
     created() {
+     
       let api = "https://elm.cangdu.org/shopping/v2/restaurant/category";
       this.$http.get(api).then((data) => {
         // console.log("有数据了")
@@ -48,9 +51,9 @@
         this.shop = d;
         console.log("aaa" + index);
         console.log('123', this.shop);
-
+       
       })
-
+      this.title=localStorage.getItem("keeptitle")
     },
 
 
@@ -72,7 +75,7 @@
       changeid(myid) {
         this.myid = myid;
         // console.log(myid, "哈哈哈啊哈")
-      }
+      },
     }
   }
 
@@ -106,7 +109,9 @@
   .h-allshop {
     z-index: -100;
   }
-
+.h-xiala{
+  margin-top: 0.4rem
+}
 </style>
 <style>
   .h-template2 span {

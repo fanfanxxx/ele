@@ -16,6 +16,27 @@ import Fuwu from '../components/us/messages/fuwuzhongxin'
 
 import Fuwustate from '../components/us/messages/moneystate/fuwustate.vue'
 import Huxinxi from '../components/us/messages/huxinxi'
+import Gai from '../components/us/messages/xiugainame'
+import Dizhi from '../components/us/messages/shouhuodizhi'
+import Xinzeng from '../components/us/messages/xinzengdizhi'
+
+import Soudi from '../components/us/messages/soudizhi'
+
+import Youhui from '../components/us/messages/youhui'
+
+import Shuoming from '../components/us/messages/hongbao/hongbaoshuoming.vue'
+import Lishi from '../components/us/messages/hongbao/lishihongbao.vue'
+
+import Duihuan from '../components/us/messages/hongbao/duihuan.vue'
+import Tuijian from '../components/us/messages/hongbao/tuijian.vue'
+import Huiyuan from '../components/us/messages/huiyuanzhongxin/huiyuan.vue'
+import Zaixian from '../components/us/messages/huiyuanzhongxin/zaixianzhifu.vue'
+import Duihuiyuan from '../components/us/messages/huiyuanzhongxin/duihuanhuiyuan.vue'
+import Jilu from '../components/us/messages/huiyuanzhongxin/goumaijilu.vue'
+import Dingdan from '../components/us/messages/wodedingdan.vue'
+import Jifen from '../components/us/messages/jifen.vue'
+import Quanshuo from '../components/us/messages/moneystate/quanshuoming.vue'
+import Yuanshuo from '../components/us/messages/huiyuanzhongxin/huiyuanshuoming.vue'
 //hcf部分 
 import Htakeout from '../components/vue-ele/htakeout'
 import Hfind from '../components/vue-ele/hfind'
@@ -24,6 +45,15 @@ import Hmine from '../components/vue-ele/hmine'
 import Shopslist from  '../components/vue-ele/home/shopslist' 
 
 import Zzs from '../components/vue-ele/home/zzs'
+//店铺详情
+import Business from '@/components/cicle/business-list'
+import Detail from '@/components/cicle/shopDetail'
+import Safe from '@/components/cicle/shopSafe'
+
+import Tan from '@/components/cicle/safe01'
+import Pay from '@/components/cicle/payment'
+import Address from '@/components/cicle/address'
+import Addlist from '@/components/cicle/addlist'
 
 
 
@@ -81,6 +111,74 @@ export default new Router({
       path:"/profile/info",
       component:Huxinxi
     },
+    {
+      //修改用户名
+      path: "/profile/info/setusername",
+      component: Gai
+    }, {
+      path: "/profile/info/address",
+      component: Dizhi
+    },{
+      //新增地址
+      path:"/profile/info/address/add",
+      component:Xinzeng
+    },{
+      //搜索地址
+      path:"/profile/info/address/add/addDetail",
+      component:Soudi
+    },{
+      //我的优惠
+      path:"/benefit",
+      component:Youhui
+    },{
+      //红包说明
+      path:'/benefit/hbDescription',
+      component:Shuoming
+
+    },
+    {
+      //红包历史
+      path:"/benefit/hbHistory",
+      component:Lishi
+    },{
+      //兑换红包
+      path:'/benefit/exchange',
+      component:Duihuan
+    },{
+      path:'/benefit/coupon',
+      component:Quanshuo
+    },{
+      //推荐有奖
+      path:"/benefit/commend",
+      component:Tuijian
+    },{
+      //会员中心
+      path:'/vipcard',
+      component:Huiyuan
+    },{
+      //会员在线支付
+      path:"/confirmOrder/payment",
+      component:Zaixian
+    },{
+      //兑换会员
+      path:"/vipcard/useCart",
+      component:Duihuiyuan
+    },{
+      //会员购买记录
+        path:"/vipcard/invoiceRecord",
+        component:Jilu
+    },{
+      //我的订单
+      path:"/order",
+      component:Dingdan
+    },{
+      path:"/chome/index",
+      component:Jifen
+    },{
+      //会员说明
+      path:"/vipcard/vipDescription",
+      component:Yuanshuo
+    },
     //hcf部分 
     {
       //外卖页面
@@ -109,11 +207,42 @@ export default new Router({
       name: 'shopslist',
        component:Shopslist
      },
-       //商铺详情页面
+        //商铺详情页面
      {
-      path: '/zzs',
-      name: 'zzs',
-       component:Zzs
+      path: '/shop',
+      name: 'business-list',
+       component: Business
      },
+    {
+      path: '/shop/shopDetail',
+      name: 'shopdetail',
+      component: Detail
+    },
+    {
+      path: '/shop/shopDetail/shopSafe',
+      name: 'shopSafe',
+      component: Safe
+    },
+    {
+      path: '/shop/list01',
+      name: 'safe01',
+      component: Tan
+    },
+    {
+      path: '/shop/payment',
+      name: 'shopche',
+      component: Pay
+    },
+    {
+      path: '/shop/payment/address',
+      name: 'address',
+      component: Address
+    },
+    {
+      path: '/shop/payment/address/addlist',
+      name: 'addlist',
+      component: Addlist
+    }
+
   ]
 })

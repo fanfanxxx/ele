@@ -43,6 +43,11 @@
     created() {
       let url = 'https://elm.cangdu.org/v3/profile/explain';
       this.$http.get(url).then((res) => {
+        for(var k in res.data){
+          if(k.search('memberPartCut')!=-1 ||k.search('memberFullCut')!=-1 ){
+            delete res.data[k];
+          }
+        }
         for (var key in res.data) {
           if (key.search("Caption") != -1) {
             this.arr.push(res.data[key])

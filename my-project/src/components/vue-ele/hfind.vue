@@ -1,7 +1,7 @@
 <template>
     <div class="d-top">
             <Header>{{msg}}</Header>
-        <Htotal></Htotal>
+        <Htotal class="h-botton3"></Htotal>
     </div>
 </template>
 <script>
@@ -17,6 +17,10 @@
         components:{
             Header,
             Htotal 
+        },
+        created(){
+            this.$store.commit("fx")
+
         }
     }
 </script>
@@ -34,5 +38,11 @@
         color:white;
         text-align: center;
         margin-left: 30%;
+    }
+    .h-botton3{
+        z-index:100;
+  position:fixed;
+  bottom: 0;
+  
     }
 </style>

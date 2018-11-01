@@ -13,7 +13,7 @@ export default {
     computed:{
         content(){
             console.log('tag')
-            return this.$store.state.quesdeatail;
+            return this.$store.getters.shaixuan;
         }
     }
 
@@ -24,6 +24,16 @@ export default {
 
 
 <style scoped>
+    div{
+        width: 100%;
+        color: #333;
+        font-size: 0.17rem;
+        line-height: 0.24rem;
+        
+    }
+    div>img{
+        width:100%;
+    }
 
 
 </style>

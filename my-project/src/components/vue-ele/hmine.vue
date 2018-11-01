@@ -2,7 +2,7 @@
     
     <div>
             <Ushome></Ushome>
-            <Htotal></Htotal>
+            <Htotal class="h-botton4"></Htotal>
     </div>
 </template>
 <script>
@@ -13,6 +13,19 @@
         components:{
             Htotal ,
             Ushome
+        },
+        created(){
+            this.$store.commit("wd")
         }
     }
+
 </script>
+<style scoped>
+    .h-botton4{
+        z-index:100;
+  position:fixed;
+  bottom: 0;
+ 
+    }
+ 
+</style>

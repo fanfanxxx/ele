@@ -1,49 +1,96 @@
 <template>
-        <div class="loading" v-show="loading">
-            <img src="../imgs/loading.gif">
+        <div id="elmloading">
+          <div class="imgbox">
+                      <div class="img">
+                            <img src="../../vue-ele/imgs/loading.gif" alt="">
+                      </div>
+              </div>
+              <!-- <div class="loadfoot">
+                  <span class="footspan"></span>
+              </div> -->
         </div>
-    </template>
-    <script>
-    export default {
-        name: 'loading',
-        data() {
-            return {
-                loading: false
-            }
-        },
-        created() {
-            var that = this;
-            this.bus.$on('loading', function(data) {
-                that.loading = !!data;
-            })
-        }
-    }
-    </script>
-    <style scoped lang="scss">
-    .loading {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        position: fixed;
-        left: 0;
-        top: 0;
-        z-index: 999;
-        width:100%;
-        height:100%;
-        color:#fff;
-        background-color: rgba(0, 0, 0, 0.8);
         
-       
-    }
-    p {
-            padding: .15rem .15rem .2rem;
-            color: #fff;
-            font-size: .16rem;
+      </template>
+      
+      <script>
+      
+      export default {
+        data () {
+          return {
+            
+          }
         }
-        img {
-            width: .4rem;
-            height: .4rem;
-        }
-    </style>
-   
+      }
+      </script>
+      
+      <!-- Add "scoped" attribute to limit CSS to this component only -->
+      <style scoped>
+      #elmloading{
+        width:100%;
+        height: 100%;
+          }
+          .imgbox{
+              width:100%;
+              height: 6rem;
+              /* animation: myfirst 0.8s infinite; */
+          }
+          .img{
+              height: 100%;
+              width: 100%;
+             
+              /* background-size:100%;
+              animation: myf 5.6s infinite; */
+          }
+          .img img{
+            height: 100%;
+              width: 100%;
+          }
+          /* .loadfoot{
+              height: 20px;
+              position: absolute;
+              bottom: 0px;
+              width: 100%;
+              text-align: center;
+          }
+          .footspan{
+              display: inline-block;
+              height: 10px;
+              width: 20px;
+              margin: 5px 0px;
+              border-radius: 50%;
+              animation: foot 0.8s infinite;
+              background: radial-gradient(#7E7E7E, #EDEDED);
+          } */
+      
+          /* @keyframes myfirst
+          {
+              0% {margin-top:0px;}
+              50% {margin-top:50px;}
+              100% {margin-top:0px;}
+          }
+          @keyframes myf
+          {
+              0% {background-position:0% 0%;}
+              14.2% {background-position:0% 0%;}
+              14.2001% {background-position:0% 16%;}
+              28.4% {background-position:0% 16%;}
+              28.4001% {background-position:0% 33%;}
+              42.6% {background-position:0% 33%;}
+              42.6001% {background-position:0% 50%;}
+              56.8% {background-position:0% 50%;}
+              56.8001% {background-position:0% 67%;}
+              71% {background-position:0% 67%;}
+              71.0001% {background-position:0% 84%;}
+              85.2% {background-position:0% 84%;}
+              85.2001% {background-position:0% 100%;}
+              100% {background-position:0% 100%;}
+          }
+      
+          @keyframes foot
+          {
+              0% {width:20px;}
+              50% {width:100%;}
+              100% {width:20px;}
+          } */
+      </style>
+      

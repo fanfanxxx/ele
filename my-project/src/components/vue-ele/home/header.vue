@@ -115,7 +115,9 @@
             title: this.title
           }
         });
-      }
+        var keeptitle=localStorage.setItem('keeptitle',title);
+      },
+    
     }
 
   }
@@ -123,7 +125,8 @@
 </script>
 <style scoped>
   .swiper1 {
-    margin-top: 0.45rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.25rem;
     display: flex
   }
 
@@ -147,8 +150,9 @@
   }
 
   .swiper2 {
-    margin-top: 0.45rem;
-    display: flex
+    padding-top: 0.2rem;;
+    display: flex;
+    padding-bottom: 0.25rem;
   }
 
   .swiper2 li {
@@ -168,6 +172,7 @@
 
   .h-ptitle1 {
     text-align: center;
+    color: #666;
   }
 
 </style>

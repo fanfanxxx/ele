@@ -14,33 +14,31 @@
         <div>
           <input type="text" placeholder="输入学校,商务楼,地址" v-model="content">
         </div>
-        
         <div>
           <input id="submit" type="submit" @click="se()">
         </div>
-      
       </div>
     </div>
     <div v-if="bool">
       <header class="f_city_history">搜索历史</header>
      
       <ul  class="f_city_history_lis">
-        <router-link tag="li" to="/htakeout" class="f_city_history_li" v-for="item in cc" :key="item.id">
+        <li  @click="tiaozhuan(item.geohash)" class="f_city_history_li" v-for="item in cc" :key="item.id">
           <h4>{{item.name}}</h4>
           <p>{{item.address}}</p>
          
-        </router-link>
+        </li>
         
       </ul>
       <footer v-if="bb"  class="f_history_clear" @click="reduce">清空所有</footer>
     </div>
     <div v-else>
       <ul class="f_city_history_lis">
-        <router-link tag="li" @click.native="add(index)" to="/" class="f_city_history_li"  v-for="(item,index) in citys"
+        <li  @click="add(item.geohash)"  class="f_city_history_li"  v-for="(item,index) in citys"
           :key="index">
           <h4>{{item.name}}</h4>
           <p>{{item.address}}</p>
-        </router-link>
+      </li>
       </ul>
     </div>
 
@@ -85,9 +83,12 @@
           console.log(res)
         })
       },
-      add(index){
-          this.$store.commit('add',this.citys[index]);
-         
+      add(ge){
+        console.log(ge)
+          // this.$store.commit('add',this.citys[index]);
+          this.$router.push({name:'htakeout',params:{geohash:ge}})
+          // var keepge=localStorage.setItem('keepge',ge);
+          localStorage.cityge=ge;
           
       },
       reduce(){
@@ -96,6 +97,11 @@
       },
       back(){
           this.$router.go(-1);
+      },
+      tiaozhuan(ge){
+        localStorage.cityge=ge;
+        this.$router.push({name:'htakeout',params:{geohash:ge}})
+        // var keepge=localStorage.setItem('keepge',ge);
       }
 
     },

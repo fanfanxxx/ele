@@ -21,7 +21,7 @@
           <strong>0</strong>
           <span>分</span>
         </div>
-        <div class="f_money_submit">
+        <div class="f_money_submit" @click="bool=true">
           积分兑换商品
         </div>
       </div>
@@ -33,6 +33,10 @@
       <p>最近30天无积分记录</p>
       <p id="f_integral_suggest">快去下单赚取大量积分吧</p>
     </div>
+    <Alert v-if="bool">
+        <p>快去下单赚取大量积分吧</p>
+        <div class="f_alert_submit" @click="bool=false">确认</div>
+    </Alert>
 
 
 
@@ -42,22 +46,34 @@
 
 <script>
   import Head from '../header'
+  import Alert from '../alert.vue'
   export default {
     name: "integral",
     data() {
       return {
-        msg: "积分说明"
+        msg: "积分说明",
+        bool:false
       }
 
     },
     components: {
-      Head
+      Head,
+      Alert
     }
   }
 
 </script>
 
 <style scoped>
+  .f_alert_submit{
+    background-color: #4cd964;
+    width: 100%;
+    line-height: 0.42rem;
+    border-radius: 0.04rem;
+    color: white;
+    font-size: 0.16rem;
+    
+}
     .f_money {
       box-sizing: border-box;
       width: 100%;

@@ -1,7 +1,7 @@
 <template>
     <div>
             <section class="f_id" >
-                    <a href="####" class="f_id_include">
+                    <a href="#/profile/info" class="f_id_include">
                       <span class="f_id_hair">
                         <img :src="'https://elm.cangdu.org/img/'+getmessage.avatar" alt="">
                       </span>
@@ -19,27 +19,27 @@
                   </section>
                   <section class="f_info_messages">
                        <ul class="f_info_messages_ul">
-                         <li>
+                         <router-link tag="li" to="/balance">
                            <div>
                               <strong class="f_info_message1">{{getmessage.balance}}</strong><span>元</span>
                            </div>
                            <p>我的金额</p>
                            
-                         </li>
-                         <li>
+                         </router-link>
+                         <router-link tag="li" to="/benefit">
                             <div>
                                   <strong class="f_info_message2">{{getmessage.gift_amount}}</strong><span>个</span> 
                             </div>
                             <p>我的优惠</p>
                             
-                          </li>
-                          <li>
+                          </router-link>
+                          <router-link tag="li" to="/points">
                               <div>
                                  <strong class="f_info_message3">{{getmessage.__v}}</strong><span>分</span>
                               </div>
                               <p>我的积分</p>
                               
-                            </li>
+                            </router-link>
                        </ul>
               
                   </section >

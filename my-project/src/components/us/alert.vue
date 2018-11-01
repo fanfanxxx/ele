@@ -1,13 +1,16 @@
 <template>
-    <section  class="f__alert">
-        <div class="f_alert_div">
-            <div class="f_alert_div_tu">
-                <span></span>
-                <span></span>
-            </div>
-            <slot></slot>
-           
-        </div>
+    <section   class="f__alert">
+        
+                <div  class="f_alert_div">
+                        <div class="f_alert_div_tu">
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <slot></slot>
+                       
+                    </div>
+        
+        
         </section>
 </template>
 
@@ -65,7 +68,8 @@ export default{
 }
 .f_alert_div>p{
   margin: 0.19rem 0.1rem;
-  font-size: o.15rem;  
+  font-size: 0.18rem;
+  line-height: 0.2rem;  
 }
 
 
