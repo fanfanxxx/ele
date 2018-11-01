@@ -122,5 +122,11 @@ export default{
     },
     yin(state){
             state.yin = !state.yin
-    }
+    },
+//添加联系人
+handles(state,int){
+  state.numss.push(int)
+    console.log(state.numss)
+}
+    
 }

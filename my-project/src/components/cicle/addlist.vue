@@ -1,47 +1,41 @@
 <template>
     <div>
-         <div class="z_addlist-header">
-           <h1> 
-               &lt;  
-               </h1>
-           <p>添加地址</p>
-        </div>
+         <Header>新建地址</Header>
         <div class="z_addlist-top">
             <ul>
                 <li class="z_addlist-top01">
                <span>联系人</span>
-              
-                    <input  type="text" placeholder="你的名字">
+                    <input  type="text" placeholder="你的名字" v-model="name">
                 </li>
                 <li class="z_addlist-top02">
-                    <i class="el-icon-circle-check-outline">   
+                    <i @click="sex" class="el-icon-circle-check-outline">   
                     </i>
                     <span>男</span>
-                    <i class="el-icon-circle-check-outline"></i>
+                    <i  @click="sex01" class="el-icon-circle-check-outline"></i>
                     <span>女</span>
                 </li>
                 <li class="z_addlist-top03">
                     <span>联系电话</span>
-                     <input type="text" placeholder="你的手机号">
+                     <input v-model="dianhua" type="text" placeholder="你的手机号">
                      <span style="color:blue;font-size:0.25rem;">+</span>
                 </li>
-                <li class="z_addlist-top04"> <input type="text" placeholder="备选电话"></li>
+                <li class="z_addlist-top04"> <input v-model="beixuan" type="text" placeholder="备选电话"></li>
               <li class="z_addlist-top05">
                     <span>送餐地址</span>
-                     <router-link to="/shop"> 
-                     <input type="text" placeholder="小区/写字楼/学校等"></router-link>
+                     <router-link to="/profile/info/address/add/addDetail"> 
+                     <input v-model="song" type="text" placeholder="小区/写字楼/学校等"></router-link>
                 </li>
                  <li class="z_addlist-top06"> 
-                     <input type="text" placeholder="详细地址">
+                     <input v-model="xiangxisong" type="text" placeholder="详细地址">
                 </li>
                   <li class="z_addlist-top07"> 
                       <span>标签</span>
-                     <input type="text" placeholder="详细地址">
+                     <input v-model="biaoqian" type="text" placeholder="详细地址">
                 </li>
             </ul>
         </div>
-        <div class="z_addlist-btn">
-              <input type="button" value="提交">
+        <div class="z_addlist-btn" @click="handle()">
+              <input  type="button" value="提交">
         </div>
     </div>
 </template>
@@ -49,8 +43,36 @@
 import Header from "../us/header.vue";
     export default{
         name:"addlist",
-        computed:{
+        data () {
+            return {
+               obj:{},
+                name:"",
+                max:"",
+                dianhua:"",
+                beixuan:"",
+                song:"",
+                xiangxisong:"",
+                biaoqian:""
+            }
+        },
+        components:{
              Header
+        },
+        created () {
+            
+        },
+        methods:{
+            handle(){
+                this.obj = {name:this.name,max:this.max,dianhau:this.dianhua,beixuan:this.beixuan,song:this.song,xiangxisong:this.xiangxisong,biaoqian:this.biaoqian};
+                this.$store.commit("handles",this.obj)
+            },
+            sex(){
+                this.max = "男" 
+            },
+             sex01(){
+                this.max = "女" 
+            },
+           
         }
     }
 </script>
@@ -82,6 +104,9 @@ import Header from "../us/header.vue";
   right: 0.1rem;
   color: white;
   /* border:1px solid red; */
+}
+.z_addlist-top{
+    margin-top:0.8rem; 
 }
 .z_addlist-top li{
     margin: 0.1rem;

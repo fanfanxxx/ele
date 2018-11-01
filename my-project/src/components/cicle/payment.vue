@@ -33,14 +33,14 @@
         <section class="z_par-indent">
             <div class="z_par-indent01">
                <p> <img style="width:0.4rem;" src="./imgs/1.jpeg" alt=""></p>
-                <p style="padding-top:0.1rem">吃啥呢</p>
+                <p style="padding-top:0.1rem">{{arr[0].specfoods[0].specs_name}}</p>
             </div>
             <ul class="z_par-indent02">
-                <li>
-                    <p>广东</p>
+                <li v-for="item in arr" :key="item.id"> 
+                    <p>{{item.specfoods[0].name}}</p>
                     <p>
-                        <span style="margin-right:0.2rem;color:red">*1</span>
-                        <span>$21</span>
+                        <span style="margin-right:0.2rem;color:red">*{{item.specfoods[0].count}}</span>
+                        <span>${{item.specfoods[0].price}}</span>
                     </p>
                 </li>
                  <li>
@@ -58,7 +58,7 @@
             </ul>
             <section class="z_par-indent03">
                 <div class="z_par-indent03-01">
-                    <p >订单&nbsp;$26206</p>
+                    <p >订单&nbsp;${{arr[0].specfoods[0].item_id}}</p>
                     <p style="color:red;">待支付</p>
                 </div>
                 <div class="z_par-indent03-02">
@@ -96,7 +96,7 @@ export default {
           return this.$store.state.numbers
       },
       arr(){
-          return this.$store.state.arr
+          return this.$store.state.arrss
       }
 
   }
@@ -132,7 +132,8 @@ export default {
   /* border:1px solid red; */
 }
 .z_pay{
-background: gray;
+    margin-top:0.3rem; 
+    background: gray;
 }
 .z_pay-add{
     height: 1rem;

@@ -18,4 +18,5 @@ export default{
   //下拉部分
   count1:"",
   
+  numss:[]
 }
