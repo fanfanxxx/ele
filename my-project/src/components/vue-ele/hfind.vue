@@ -20,16 +20,11 @@
         },
         created(){
             this.$store.commit("fx")
-
         }
     }
 </script>
 <style scoped>
-    .d-top{
-        width: 100%;
-        height: 50px;
-        background-color: blue;
-    }
+     
     .h-ding{
         width: 40%;
         height: 50px;

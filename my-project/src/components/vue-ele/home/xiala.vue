@@ -187,7 +187,6 @@
       currentIndex:'-1',
       isindex:"",
       chooseindex:0,
-      datashow:true
     }),
     computed:mapState({
        count1:"count1"
@@ -221,7 +220,7 @@
         this.num1=true;
         
         this.blue2=!this.blue2; this.blue=this.blue1=false;
-        this.$store.commit("clearnumber");  
+        // this.$store.commit("clearnumber");  
       },
       list1: function(a,e) {
         this.value4 = false;
@@ -262,23 +261,16 @@
       changeimg:function(){
         this.showimg=!this.showimg
       },
+      //切换到选中
       toggleShow: function (index,value) {     
+        this.$store.commit("addnumber",value)
          let newItem = this.shaixuandata[index]
         newItem.show = !this.shaixuandata[index].show
-        Vue.set(this.shaixuandata, index, newItem)      // 一定要注意vue不能检测的几种数据变化情况包括数组和对象
+        Vue.set(this.shaixuandata, index, newItem) // 一定要注意vue不能检测的几种数据变化情况包括数组和对象
         // this.isindex=index
-        console.log(index,"bbbbbbbb");
-        this.$store.commit("addnumber",value)
-        
+        console.log(index,"bbbbbbbb");  
       },
-      
-      addnumber1(value){
-        this.$store.commit("addnumber",value)
-       
-      },
-      reducenumber0(value){
-        this.$store.commit("reducenumber",value)
-      },
+      // 取消选中
       reducenumber1(index,value){
         // console.log(index,"hhhhhhh")
         this.$store.commit("reducenumber",value)
@@ -286,10 +278,20 @@
         newItem2.show=!this.shaixuandata[index].show;
         Vue.set(this.shaixuandata, index, newItem2)  
       },
+      //数据加
+      addnumber1(value){
+        this.$store.commit("addnumber",value) 
+      },
+      // 数据减
+      reducenumber0(value){
+        this.$store.commit("reducenumber",value)
+      },
+      //确定
       hsure(){
            this.value3=this.blue2=false;
            this.num2=true;
       },
+      //清空
       clear1(){
         this.$store.commit("clearnumber");  
         // let newItem2=this.shaixuandata;
@@ -582,7 +584,6 @@
  .nimg1{
    position: absolute;
    /* border: 1px solid red; */
-   /* left:-30%; */
    top:0;
    width: 30%;
    height: 0.8rem;

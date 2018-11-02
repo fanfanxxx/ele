@@ -5,12 +5,21 @@
 
     
     <div class="h-input">
-      <input v-model="inputval" class="cityinput" placeholder="搜索商家或食品">
+      <input v-model="inputval" class="foodinput" placeholder="搜索商家或食品">
      
-      <div @click="searchcity" class="submit">提交</div>
+      <div @click="searchfood" class="submit">提交</div>
     </div>
 
     <div class="main">
+ <!-- //搜索到的东西 -->
+ <div v-if="list!=''" class='search '>
+    <div v-for="item in list" @click="goaddress({name:item.name,latitude:item.latitude,longitude:item.longitude,address:item.address,geohash:item.geohash})"
+      class="result">
+      <div class=" h-sname ">{{item.name}}</div>
+      <!-- <div class=" h-saddress ">{{item.address}}</div> -->
+    </div>
+  </div>
+
 
       <div v-if="list==''" class="his after">
         <div class='h-history'>搜索历史</div>
@@ -25,20 +34,13 @@
           </div>
         </div>
       </div>
-       <!-- //搜索到的东西 -->
-      <div v-if="list!=''" class='search '>
-        <div v-for="item in list" @click="goaddress({name:item.name,latitude:item.latitude,longitude:item.longitude,address:item.address,geohash:item.geohash})"
-          class="result">
-          <div class=" h-sname ">{{item.name}}</div>
-          <!-- <div class=" h-saddress ">{{item.address}}</div> -->
-        </div>
-      </div>
       
+     
+   
     </div>
    
   </div>
   <Htotal class="h-botton2"></Htotal>
-   
   </div>
 </template>
 
@@ -71,11 +73,10 @@ import Htotal from "../vue-ele/htotal"
     },
     computed: {
       //计算属性
-
     },
     methods: {
       //函数
-      searchcity: function () {
+      searchfood: function () {
         this.$http.get('https://elm.cangdu.org/v1/pois?city_id=32' + '&keyword=' + this.inputval + '&type=search').then(
           response => {
             console.log(response);
@@ -85,6 +86,7 @@ import Htotal from "../vue-ele/htotal"
 
           });
       },
+      //去重展示历史纪录
       goaddress:function(e){
       var arr=[];
       if(localStorage.getItem("his")){
@@ -105,7 +107,7 @@ import Htotal from "../vue-ele/htotal"
       this.list='';
 },
       removeall: function () {
-        localStorage.clear();
+        // localStorage.clear();
         this.his = "";
       }
 
@@ -119,25 +121,26 @@ import Htotal from "../vue-ele/htotal"
     .searchfood{
       width: 100%;
       height: 100%;
+      /* display: flex; */
       /* border: 2px solid black; */
-      position: relative;
+      /* position: relative; */
     }
   .h-input {
     width: 100%;
-    position: relative;
+    /* position: relative; */
+    display: flex;
+    justify-content: space-around;
   }
-  .cityinput {
-    width: 60%;
-    height: 0.5rem;
-    margin:0.5rem 0px;
+  .foodinput {
+    width: 70%;
+    height: 0.8rem;
+    margin-top:0.6rem ;
+    margin-left:0.2rem ;
     outline: 0px;
     padding: 0px 5px;
     box-sizing: border-box;
     border: 1px solid gray;
     background-color: #f2f2f2;
-    position: absolute;
-    top: 0;
-    left: 0.2rem;
     height: 0.3rem;
     border-radius: 0.03rem;
   }
@@ -149,65 +152,74 @@ import Htotal from "../vue-ele/htotal"
     background-color: #3190e8;
     color: white;
     border-radius: 0.03rem;
-    position: absolute;
-    right: 0.1rem;
-    top: 0.5rem;
+    margin-top:0.6rem ;
+    margin-right:0rem ;
     font-size: 0.2rem;
   }
-
-  .h-history {
-    font-size: 0.12rem;
-    margin-top: 0.9rem;
-    margin-left: 0.2rem;
-    color: #666;
-   
-  }
-.search {
-    margin-top: 1rem;   
-  }
-  .result{
-    margin-top: 0.05rem;
-    color: #666;
-    border-bottom: 1px solid gray;
-    padding-left:  0.2rem;
-    padding-bottom:  0.1rem;
-  }
-  .h-sname {
-    font-size: 0.15rem;
-    padding-bottom:  0.05rem;
-    padding-top:  0.05rem;
-  }
-  .h-saddress {
-    margin-top: 0.05rem;
-    font-size: 0.09rem;
-  }
-  .main {
-    border-top: 2px solid #E4E4E4;   
-  }
-
- 
-  .mainbody {
-    margin-top: 0.15rem;
-    /* border:1px solid red; */
-
-  }
   
+
+  /* 大的div */
+  .main{
+    width: 100%;
+    height: 100px;
+    /* border: 1px solid blueviolet; */
+    margin-top: 0.2rem;
+  }
+  /* 搜索到的东西 */
+  .search { 
+  width: 100%;
+  }
+.result{
+  margin-top: 0.05rem;
+  color: #666;
+  border-bottom: 1px solid gray;
+  padding-left:  0.3rem;
+  padding-bottom:  0.1rem;
+}
+.h-sname {
+  font-size: 0.15rem;
+  padding-bottom:  0.05rem;
+  padding-top:  0.05rem;
+}
+.h-saddress {
+  margin-top: 0.05rem;
+  font-size: 0.09rem;
+}
+  /* 搜索历史 */
+  .his{
+    width: 100%;
+    float: left;
+    
+  }
+   /* 搜索历史四个字 */
+   .h-history {
+    font-size: 0.15rem;
+    margin-left: 0.2rem;
+    height: 0.3rem;
+    line-height: 0.3rem;
+    font-weight: 700;
+    color: #666;
+  }
+  .mainbody {
+    width: 100%;  
+    margin-top: 0.1rem;
+  }
+ 
   .h-history1{
-    border-bottom: 1px solid gray;
+    /* border:1px solid red; */
     width: 100%;   
-    margin-top: 0.9rem;
     padding-left: 0.2rem;
     color: #666;
     background-color: white
-
   }
    .history-name{
- /* border:1px solid red; */
- margin-top: -0.7rem;
  padding-top: 0.1rem;
- margin-bottom: 0.05rem;
+ /* margin-bottom: 0.05rem; */
  padding-bottom: 0.1rem;
- font-size: 0.15rem;
+ border-bottom: 1px solid gray;
+ font-size: 0.18rem;
+ color: #333;
+ margin-top: 0.1rem;
    }
    .history-address{
  /* border:1px solid red; */
@@ -215,21 +227,20 @@ import Htotal from "../vue-ele/htotal"
  margin-bottom: 0.05rem;
  padding-bottom: 0.1rem;
    }
-   
     .clearall {
     text-align: center;
-    height: 0.3rem;
+    height: 0.4rem;
     background-color: white;
     color:#3190e8 ;
     font-size: 0.2rem;
-    line-height: 0.3rem;
-     margin-top: 0.1rem;
+    line-height: 0.4rem;
+     margin-top: 0.2rem
   
   }
   .h-botton2{
     z-index:100;
   position:fixed;
-  bottom: 0rem;
+  bottom: 0;
   
   }
 

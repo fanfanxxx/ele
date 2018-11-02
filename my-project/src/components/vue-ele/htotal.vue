@@ -7,7 +7,6 @@
                 <li v-show="value1"><img src="./imgs/elm.png" alt=""></li>
                 <li v-show="!value1"><img src="./imgs/elm1.png" alt=""></li>
           </div>
-        
         <p>外卖</p>
       </ul>
     </router-link>
@@ -17,12 +16,11 @@
                 <li v-show="value2"><img src="./imgs/zhi.png" alt=""></li>
 
                  <li v-show="!value2"><img src="./imgs/zhi1.png" alt=""></li>
-        </div>
-       
+        </div>  
         <p>搜索</p>
     </ul>
 </router-link >
-<router-link  class="h-link" :to="{name:'hfind'}">
+<router-link  class="h-link" to="/order">
     <ul class="static" >
         <div @click="fx1">
                 <li v-show="value3"><img src="./imgs/order.png" alt=""></li>
@@ -63,7 +61,6 @@
        value4:"value4",
 
      }),
-    
      methods:{
         wm1(){
             this.$store.commit("wm")
@@ -84,10 +81,7 @@
 <style scoped>
     .h-total{
         width: 100%;
-        background-color: white;
-        /* border: 1px solid red; */
-        /* height: 100%; */
-       
+        background-color: white; 
     }
   .h-botton
   {
@@ -95,29 +89,24 @@
       height: 0.6rem;
       display: flex;
       justify-content: flex-start;
-      /* position:fixed; */
-      /* bottom:0; */
       background-color: white;
-      /* z-index: 100; */
-      /* border: 1px solid red; */
-      /* border: 1px solid rgb(111, 22, 194); */
-      
   }
   .h-botton .h-link{
     width: 25%;
+    height: 0.6rem;
   }
   .h-link li img{
       width: 50%;
       margin-left: 25%;
-      height: 40px;
+      margin-top: 0.1rem;
+      height: 0.3rem;
   }
   .h-link p{
     text-align: center;
-    color: gray
+    color: gray;
+    font-size: 0.14rem;
   }
  /* .router-link-active p{
-     color:blue;
-    
-    
+     color:blue; 
  } */
 </style>

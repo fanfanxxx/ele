@@ -131,21 +131,24 @@
     position: relative;
     border-top: 1px solid gray;
     margin-bottom: 0.1rem;
+    /* border:1px solid red; */
+    height: 0.5rem;
   }
 
   .h-logo {
     width: 0.2rem;
-    height: 30px;
-    margin-top: 0.3rem;
-    /* border:1px solid red; */
-    /* float: left; */
-    margin-left:5%;
+    height: 0.3rem;
+   position: absolute;
+   top:15%;
+    left:5%;
   }
-
+  .h-logo img{
+      padding-top:0.08rem
+  }
   .shopers {
     position: absolute;
     left: 12%;
-    top: 60%;
+    top: 30%;
     color: gray;
     /* float: left; */
   }
