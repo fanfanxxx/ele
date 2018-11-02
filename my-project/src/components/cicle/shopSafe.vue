@@ -1,7 +1,7 @@
 <template>
     <div class="wrap">
        <div class="z_shop-header">
-           <h1> 
+           <h1 @click="tiao()"> 
                &lt;  
                </h1>
            <p>食品监督安全公示</p>
@@ -88,6 +88,11 @@ export default {
       this.data = data.data
       console.log(this.data)
     })
+  },
+  methods:{
+    tiao(){
+      this.$router.go(-1)
+    }
   }
 }
 </script>

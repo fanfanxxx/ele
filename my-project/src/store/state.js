@@ -17,6 +17,11 @@ export default{
   yin:false,
   //下拉部分
   count1:"",
-  
-  numss:[]
+  numss:[],
+  submit:"",
+  cangde:false,
+  tingde:"true",
+  //店铺上部分数组
+  shopss:[]
+
 }

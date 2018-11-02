@@ -34,9 +34,9 @@
                 </li>
             </ul>
         </div>
-        <div class="z_addlist-btn" @click="handle()">
+        <router-link to="/shop/payment/address"><div class="z_addlist-btn" @click="handle()">
               <input  type="button" value="提交">
-        </div>
+        </div></router-link>
     </div>
 </template>
 <script>
@@ -63,7 +63,7 @@ import Header from "../us/header.vue";
         },
         methods:{
             handle(){
-                this.obj = {name:this.name,max:this.max,dianhau:this.dianhua,beixuan:this.beixuan,song:this.song,xiangxisong:this.xiangxisong,biaoqian:this.biaoqian};
+                this.obj = {name:this.name,max:this.max,dianhua:this.dianhua,beixuan:this.beixuan,song:this.song,xiangxisong:this.xiangxisong,biaoqian:this.biaoqian};
                 this.$store.commit("handles",this.obj)
             },
             sex(){

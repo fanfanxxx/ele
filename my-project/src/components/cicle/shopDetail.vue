@@ -1,7 +1,7 @@
 <template>
     <div class="wrap">
        <div class="z_shop-header">
-           <h1> 
+           <h1 @click="tiao()"> 
             &lt;  
                </h1>
            <p>商家详情</p>
@@ -10,7 +10,7 @@
             
             <ul class="z_shop-tops">
                 <h3>活动与属性</h3>
-                <li class="z_shop-top-active" v-for="item in data[0].supports" :key="item.id">
+                <li class="z_shop-top-active" v-for="item in data.supports" :key="item.id">
                     <span :style="'background:#'+item.icon_color">
                        {{item.icon_name}}
                     </span>
@@ -39,15 +39,15 @@
             <h2>商家信息</h2>
             <ul class="z_shop-bottom-intion">
                 <li class="z_shop-bottom-intion01">
-                            {{data[0].name}}
+                            {{data.name}}
                 </li>
                 <li class="z_shop-bottom-intion02">
                     <span> 地址:</span>   
-                    <span>{{data[0].address}}</span>
+                    <span>{{data.address}}</span>
                 </li>
                 <li class="z_shop-bottom-intion03">
                     <span>营业时间:</span>
-                    <span>{{data[0].opening_hours}}</span>
+                    <span>{{data.opening_hours}}</span>
                 </li>
                 <li class="z_shop-bottom-intion04">
                     营业执照
@@ -76,6 +76,11 @@ export default {
       this.data = data.data;
       console.log(this.data);
     });
+  },
+  methods: {
+    tiao(){
+      this.$router.push("/shop")
+    }
   }
 };  
 </script>

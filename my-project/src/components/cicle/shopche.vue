@@ -4,7 +4,7 @@
         <ul class="z_base-shop">
           <li class="z_base-shopimg" >
                   <p style="width:0.2rem;height:0.2rem;border-radius:50%;
-                  text-align:center;background:red;float:right;;">1</p>
+                  text-align:center;background:red;float:right;;">{{arr.length}}</p>
             <img  src="./imgs/14472493.png" alt="">
           </li>
           <li class="z_base-shopPrice" @click="yin()">
@@ -14,9 +14,11 @@
             </p>
             <p style="font-size: 0.13rem;margin-top:0.05rem">配送费$5</p>
           </li>
-          <router-link to="/shop/payment"><li class="z_base-shopOver">
-            <a style="color: black;" href="###">去结算</a>
-          </li></router-link>
+         <li class="z_base-shopOver" >
+            <button   type="button" class="btn btn-default btn-lg"  @click="tiao">
+                    结算
+              </button>
+          </li>
         </ul>
        
       </div>
@@ -27,19 +29,35 @@ export default {
   data () {
       return {
            ping: true,
+           length:false,
+           ting:true
+          
       }
   },
   computed:{
     text(){
         return this.$store.state.numbers
       },
+       arr(){
+          return this.$store.state.arrss
+      }
   },
   methods:{
     yin(){
  this.$store.commit("yin");
+    },
+    tiao(){
+      if(this.arr.length<1){
+        return ;
+      }
+        this.$router.push("/shop/payment");
+     
     }
    
-  }
+  },
+  created(){
+   
+  },
 }
 </script>
 <style>

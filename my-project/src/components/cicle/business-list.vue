@@ -21,7 +21,7 @@
         </div>
         <div class="z_top-active">
           <p>
-            <span style="background: limegreen; margin-right: 0.05rem;"></span>
+            <span style="background: limegreen; margin-right: 0.05rem;">新</span>
             <span style=" margin-right: 0.05rem;">新用户8折</span>
             <span>(app专享)</span></p>
           <p><span>一个活动</span>
@@ -29,7 +29,7 @@
 
         </div>
        <div class="z_top-active-details">
-          <router-link to="/shop/shopDetail"><p style="font-size:0.28rem;"> ></p></router-link > 
+          <router-link to="/shop/shopDetail"><p style="font-size:0.3rem;color:white;"> ></p></router-link > 
         </div>
         <div class="z_top-background">
               <img class="blur" :src="'https://elm.cangdu.org/img/'+data01.image_path" alt="">
@@ -103,9 +103,9 @@
                     <!-- @click="countAdd(value.specfoods[num].price,values01,index)" -->
                     <section class="z_bottom-hotBox-list02-right" >
                       <section style="font-size: 0.16rem;">
-                        <i class="el-icon-remove-outline" style="font-size: 0.21rem" v-show="value.specfoods[0].count>0" @click="app(item.id,value.specfoods[0].food_id)"></i>
+                        <i class="el-icon-remove-outline" style="font-size: 0.21rem" v-show="value.specfoods[0].count>0" @click="app(value.specfoods[0])"></i>
                         <span @click="yins()"  style="font-size: 0.15rem">{{value.specfoods[0].count}}</span>
-                        <i class="el-icon-circle-plus" style="font-size: 0.21rem" @click="add(item.id,value.specfoods[0].food_id,value)"></i>
+                        <i class="el-icon-circle-plus" style="font-size: 0.21rem" @click="add(value.specfoods[0])"></i>
                       </section>
                     </section>
                   </footer>
@@ -183,13 +183,16 @@
         </section>
       </div>
       <div class="z_tankaung"  v-if="yin">
+        <section style="display:flex;justify-content: space-between;">
+          <p>购物车</p><p @click="clear()">清空</p>
+        </section>
     <section v-for="fff in arr" :key="fff.id">
-      <p>{{fff.specfoods[0].name}}</p>
-      <p>{{fff.specfoods[0].price}}</p>
+      <p>{{fff.name}}</p>
+      <p>{{fff.price}}</p>
       <div style="display:flex;">
-      <p @click="jian(fff.specfoods[0].food_id)">-</p>
-      <p>{{fff.specfoods[0].count}}</p>
-      <p @click="jia(fff.specfoods[0].food_id)">+</p>
+      <p @click="app(fff)">-</p>
+      <p>{{fff.count}}</p>
+      <p @click="add(fff)">+</p>
       </div>
     </section>
    </div>
@@ -243,21 +246,18 @@ export default {
         return;
       }
     },
-    app(aaa,bbb) {
-        this.$store.commit("app",{aa:aaa,bb:bbb});
+    app(aaa) {
+        this.$store.commit("app",aaa);
       
     },
-    add(aaa,bbb,ccc){
-      this.$store.commit("addShop",{aa:aaa,bb:bbb,cc:ccc});
-    },
-    jia(aaa){
-      this.$store.commit("jia",aaa);
-    },
-    jian(aaa){
-      this.$store.commit("jian",aaa);
+    add(aaa){
+      this.$store.commit("addShop",aaa);
     },
     yins(){
       this.$store.commit("yin");
+    },
+    clear(){
+      this.$store.commit("clear")
     }
     
   },
@@ -287,6 +287,7 @@ export default {
     this.$http.get(api01).then(data => {
       // console.log(data);
       this.data01 = data.data.filter(key => this.aaa == key.id)[0];
+      this.$store.commit("shopss",data.data)
       // console.log(this.data01)
     });
     this.$http.get(api02).then(data => {
@@ -630,7 +631,7 @@ export default {
   width: 3.75rem;
   background: black;
    position: absolute;
-  bottom: 1rem;
+  bottom: 0.5rem;
   z-index: 500;
 }
 .z_tankaung section{

@@ -1,9 +1,9 @@
 <template>
     <div>
-        <Header>添加地址</Header>
+        <Header @click="tiao()">添加地址</Header>
         <div class="z_add-top">
             <ul>
-                <li v-for="(item,index) in arrs" :key="index" >
+                <li v-for="(item,index) in arrs" :key="index">
                   <section>
                     <p>
                       <span style="font-size:0.25rem;color:blue;margin-right:0.3rem">{{item.name}}</span>
@@ -19,6 +19,8 @@
                     <p><span  style="font-size:0.2rem;color:blue;margin-right:0.1rem">详细地址:</span>{{item.xiangxisong}}</p>
                   </section>
                   <p><span style="font-size:0.2rem;color:blue;margin-right:0.1rem">标签:</span><span>{{item.biaoqian}}</span></p>
+                  <p style="text-align:center;color:red;" @click="clear()">删除</p>
+                  <router-link to="/shop/payment" ><p style="text-align:center;color:red;" @click="submit(item.name),cang()">提交</p></router-link>
                 </li>
             </ul>
             </div> 
@@ -38,12 +40,24 @@ export default {
     Header
   },
   methods: {
-   
+    clear(){
+       this.$store.commit("clear")
+    },
+    tiao(){
+      this.$router.push("/shop/payment")
+    },
+    submit(aaa){
+          this.$store.commit("submit",aaa)
+    },
+    cang(){
+       this.$store.commit("cangde")
+    }
   },
   computed: {
      arrs(){
        return this.$store.state.numss
-            }
+            },
+           
   }
 };
 </script>
@@ -98,12 +112,13 @@ export default {
 }
 .z_add-buttom{
     width: 100%;
-   position: absolute;
+   position: fixed;
    bottom: 0;
    display: flex;
    justify-content: center;
     font-size:0.24rem;
     padding: 0.1rem;
+    background: white
 }
 </style>
 
