@@ -238,7 +238,7 @@
   .h-block {
     margin-top: 0.1rem;
     /* border: 1px solid blue; */
-    width: 50%;
+    width: 40%;
   }
 
   .el-rate {
@@ -246,19 +246,21 @@
   }
 
   .h-point {
-    width: 10%;
+    width: 15%;
     line-height: 0.5rem;
     /* border: 1px solid red; */
-    margin-left: -5%;
+    margin-left: -25%;
     color: #ff9900;
+    /* text-align: center */
   }
 
   .h-bills {
-    margin-left: 5%;
+    margin-left: -15%;
     width: 40%;
     line-height: 0.5rem;
     font-size: 0.08rem;
     color: #666;
+    /* border: 1px solid red; */
   }
 
   .h-botton {
@@ -308,7 +310,7 @@
   .h-ontime span {
     height: 0.25rem;
     line-height: 0.25rem;
-    width: 35%;
+    width: 40%;
     /* border:1px solid blue; */
     text-align: center;
   }

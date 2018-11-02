@@ -2,21 +2,16 @@
   <div>
 
     <div class="h-block">
-
-      <!-- <el-carousel trigger="click" height="2.42rem" overflow="hidden"> -->
-      <!-- <el-carousel-item v-for="item in 2" :key="item"> -->
+  
       <!-- 轮播图 -->
       <swiper :options="swiperOption" ref="mySwiper">
         <swiper-slide class="swiper1">
           <router-link to="/shopslist">
             <li v-for="(srcData1,index) in imgsData1" :key="index">
               <!--https://fuss10.elemecdn.com/d/38/7bddb07503aea4b711236348e2632jpeg.jpeg -->
-
               <div @click="goParam(index,imgsData1[index].title)">
                 <img :src="'https://fuss10.elemecdn.com'+srcData1.image_url" alt="">
-
                 <p class="h-ptitle">{{srcData1.title}}
-
                 </p>
               </div>
             </li>
@@ -27,10 +22,8 @@
           <router-link to="/shopslist">
             <li v-for="(srcData2,index) in imgsData2" :key="index">
               <!--https://fuss10.elemecdn.com/d/38/7bddb07503aea4b711236348e2632jpeg.jpeg -->
-
               <div @click="goParam(index,imgsData2[index].title)">
                 <img :src="'https://fuss10.elemecdn.com'+srcData2.image_url" alt="">
-
                 <p class="h-ptitle1">{{srcData2.title}}
                 </p>
               </div>
@@ -39,9 +32,6 @@
         </swiper-slide>
         <div class="swiper-pagination" slot="pagination"></div>
       </swiper>
-
-
-
     </div>
 
   </div>
