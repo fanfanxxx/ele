@@ -1,7 +1,7 @@
 <template>
     <div class="wrap">
        <div class="z_shop-header">
-           <h1 @click="tiao"> 
+           <h1 @click="diao"> 
             &lt;  
                </h1>
            <p v-if="data[0].foods[0].name">{{data[0].foods[0].name}}</p>
@@ -49,8 +49,8 @@ export default {
     });
   },
   methods:{
-    tiao(){
-      this.$router.push('/shop');
+    diao(){
+      this.$router.go(-1);
     }
   },
   computed:{
@@ -95,8 +95,6 @@ export default {
 }
 .z_shop-bottom{
    width: 100%;
-   
-   margin-left: 0.1rem;
 }
 .z_shop-bottom h2,.z_shop-bottom p{
 margin-top:0.2rem;

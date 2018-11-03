@@ -6,7 +6,7 @@
         {{msg}}
       </span>
     </Head>
-    <section v-if="data[0]" class="f_top">
+    <section v-if="data[0]&&getmess" class="f_top">
 
       <img :src="'https://elm.cangdu.org/img/'+data[0].image_path" alt="">
       <div class="f_right">
@@ -17,7 +17,7 @@
                     <span class="el-icon-arrow-right"></span>
               </div>
             
-            <p>2018-11-01 09:09</p>
+            <p>{{timestr}}</p>
           </div>
           <span>
             等待支付
@@ -56,7 +56,8 @@
         msg: "订单列表",
         content:"支付超时",
         tim:"",
-        bol:false
+        bol:false,
+        timestr:""
       }
     },
     computed:{
@@ -68,6 +69,9 @@
       },
         data(){
         return this.$store.state.shopss
+      },
+      getmess(){
+        return this.$store.state.usermessage;
       }
     },
     components: {
@@ -78,18 +82,17 @@
     created(){
       
             this.$store.commit("fx");
-      
         var _this = this;
-      var time = 900;
+      var time1 = 900;
       clearInterval(timer);
       var timer = setInterval(function () {
-        time--;
-        if (time > 0) {
-          var m = parseInt(time / 60);
+        time1--;
+        if (time1 > 0) {
+          var m = parseInt(time1 / 60);
           if (m < 10) {
             m = '0' + m;
           }
-          var s = Math.floor(time % 60);
+          var s = Math.floor(time1 % 60);
           if (s < 10) {
             s = '0' + s;
           }
@@ -101,6 +104,16 @@
           clearInterval(timer);
         }
       }, 1000);
+      var time = new Date();
+      var year = time.getFullYear();
+     var month = time.getMonth();
+      var day = time.getDate();
+     var h = time.getHours();
+     var m = time.getMinutes();
+     var str = year+"-"+month+"-"+day+"  "+h+":"+m;
+     console.log(str);
+     this.timestr = str;
+
     }
   }
 

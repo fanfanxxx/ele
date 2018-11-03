@@ -122,6 +122,9 @@
     },
     methods: {
       submit() {
+        if(this.b1 || this.b2 || this.b3 || this.b4 || !this.c1 || !this.c2 || !this.c3 || !this.c4 || !this.c5 ){
+          return;
+        }
         var url = 'https://elm.cangdu.org/v1/users/' + this.usermes.id + '/addresses';
         this.$http({
           method: 'post',

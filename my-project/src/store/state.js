@@ -2,7 +2,7 @@ export default{
     history:[],
     bol:false,
     quesdeatail:"",
-    usermessage:{},
+    usermessage:null,
     diobj:{},
     dizhi:[],
     value1:null,

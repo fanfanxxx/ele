@@ -2,7 +2,7 @@
 
     <!--总体页面  分为上中下底四个模块-->
     <div class="z_wrap">
-      <Header style="background:none"></Header>  
+      <Header style="background:none" @click="tiao()"></Header>  
       <!--上模块-->
       <div class="z_top">
         <div class="z_top-top">
@@ -183,12 +183,12 @@
         </section>
       </div>
       <div class="z_tankaung"  v-if="yin">
-        <section style="display:flex;justify-content: space-between;">
+        <section style="display:flex;justify-content: space-between;color:black;font-size:0.2rem;background:gray;">
           <p>购物车</p><p @click="clear()">清空</p>
         </section>
     <section v-for="fff in arr" :key="fff.id">
       <p>{{fff.name}}</p>
-      <p>{{fff.price}}</p>
+      <p>${{fff.price}}</p>
       <div style="display:flex;">
       <p @click="app(fff)">-</p>
       <p>{{fff.count}}</p>
@@ -258,6 +258,9 @@ export default {
     },
     clear(){
       this.$store.commit("clear")
+    },
+    tiao(){
+      this.$router.push("/htakeout")
     }
     
   },
@@ -565,17 +568,18 @@ export default {
   /*border: 1px solid red;*/
 }
 .z_app-contentS {
-  margin: 0.08rem;
+  margin: 0.1rem;
   /*border: 1px solid red;*/
 }
 
 .z_app-contentSS {
-  width: 0.78rem;
+
   /*border: 1px solid red;*/
   background: #2fa8ec;
   margin-right: 0.05rem;
   display: inline-block;
   text-align: center;
+  margin-top: 0.05rem;
 }
 .z_app-contentSS:hover {
   color: white;
@@ -629,7 +633,7 @@ export default {
 } */
 .z_tankaung{
   width: 3.75rem;
-  background: black;
+  background: white;
    position: absolute;
   bottom: 0.2rem;
   z-index: 500;
@@ -638,10 +642,11 @@ export default {
   display: flex;
   justify-content:space-between;
  
+ 
 }
 .z_tankaung section p{
   margin: 0.2rem;
-  color: red;
+  color: black;
 }
 </style>
 <style>

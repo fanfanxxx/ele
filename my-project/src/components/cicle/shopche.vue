@@ -15,9 +15,9 @@
             <p style="font-size: 0.13rem;margin-top:0.05rem">配送费$5</p>
           </li>
          <li class="z_base-shopOver" >
-            <button   type="button" class="btn btn-default btn-lg"  @click="tiao">
+            <p  @click="tiao">
                     结算
-              </button>
+              </p>
           </li>
         </ul>
        

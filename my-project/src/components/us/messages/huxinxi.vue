@@ -11,7 +11,7 @@
     </Elert>
 
     <section class="f_hu_top">
-        <div href="####" class="f_touxiang">
+        <div class="f_touxiang">
             <input type="file"  class="f_file">
            <span>头像</span>
            <div>
