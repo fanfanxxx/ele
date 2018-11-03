@@ -24,7 +24,7 @@
           </span>
         </div>
         <div class="f_right_center">
-            <span>{{arr.item_id}}等{{arr.length}}件商品</span>
+            <span >{{arr[0].item_id}}等{{arr[0].length}}件商品</span>
             <span>￥{{number}}</span>
         </div>
         <div class="f_right_bottom">

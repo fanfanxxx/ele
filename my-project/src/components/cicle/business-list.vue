@@ -145,7 +145,7 @@
                   score-template="{value}" class="el-rate__icon">
                 </el-rate>
               </p>
-              <p><span style="margin-right: 0.1rem;">送达时间</span><span>分钟</span></p>
+              <p><span style="margin-right: 0.1rem;">送达时间</span><span>{{data[0].foods[0].server_utc}}</span></p>
             </section>
           </header>
         <section class="z_app-content">
@@ -153,7 +153,7 @@
             <li class="z_app-contentSS"  v-for="(oo,index) in data03" :key="index">{{oo.name}}({{oo.count}})</li>
           </ul>
           <ul class="z_app-contentX" v-for="(items,index) in data02" :key="index">
-              <img style="width: 0.3516rem;height: 0.3516rem;margin-right: 0.2rem;margin-left: 0.1rem;" src="" alt="">
+              <img style="width: 0.3516rem;height: 0.3516rem;margin-right: 0.2rem;margin-left: 0.1rem;" :src="'https://elm.cangdu.org/img/'+items.image_hash" alt="">
               <ul class="z_app-contentXX-name">
                 <li style="width:2.5rem;">
                 <p>{{items.username}}</p>
@@ -170,8 +170,8 @@
         </li>
         </ul>
               <ul class="z_app-contentXX-img">
-                <li class="z_app-contentXX-img1" v-for="val in data02.item_ratings" :key="val.id">
-                  <img style="width: 0.7rem;margin-right: 0.1rem;" src="" alt="">
+                <li class="z_app-contentXX-img1" v-for="val in data02.item_ratings" :key="val._id">
+                  <img style="width: 0.7rem;margin-right: 0.1rem;" :src="'https://elm.cangdu.org/img/'+val.image_hash" alt="">
                 </li>
               </ul>
               <ul class="z_app-contentXX-mark">
@@ -631,7 +631,7 @@ export default {
   width: 3.75rem;
   background: black;
    position: absolute;
-  bottom: 0.5rem;
+  bottom: 0.2rem;
   z-index: 500;
 }
 .z_tankaung section{

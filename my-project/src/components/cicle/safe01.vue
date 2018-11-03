@@ -4,14 +4,14 @@
            <h1 @click="tiao"> 
             &lt;  
                </h1>
-           <p>好吃的</p>
+           <p v-if="data[0].foods[0].name">{{data[0].foods[0].name}}</p>
            </div> 
-        <div class="z_shop-top">
-            <img src="./imgs/35.jpg" alt="">
+        <div class="z_shop-top" v-if="data[0].foods[0].image_path">
+            <img :src="'https://elm.cangdu.org/img/'+ data[0].foods[0].image_path" alt="">
             <h3>好吃的</h3>
         </div>
         <div class="z_shop-bottom">
-                   <h2>好吃的</h2>
+                   <h2 v-if="data[0].foods[0].name">{{data[0].foods[0].name}}</h2>
                    <p>
                 <span style="font-size: 0.15rem;margin-right: 0.05rem;">服务态度</span>
                 <el-rate
@@ -23,7 +23,7 @@
                 </el-rate>
               </p>
                 <p class="z_shop-bottom-intion05">
-            评论数:<span>498</span>
+            评论数:<span v-if="data[0].foods[0].rating_count">{{data[0].foods[0].rating_count}}</span>
             好评率:<span>63%</span>
                 </p> 
         </div>
@@ -37,20 +37,26 @@ export default {
     return {
       data: [],
        value5: 3.7,
+       aaa:""
     };
   },
   created() {
-    let api = "https://elm.cangdu.org/shopping/v2/menu?restaurant_id=1";
+    this.aaa = localStorage.shopid;
+    let api = "https://elm.cangdu.org/shopping/v2/menu?restaurant_id="+this.aaa;
     this.$http.get(api).then(data => {
       // console.log(data);
       this.data = data.data;
-      console.log(this.data[0].foods[0].attributes[0].icon_name);
     });
   },
   methods:{
     tiao(){
       this.$router.push('/shop');
     }
+  },
+  computed:{
+    shopAdd(){
+                    return this.$store.state.shopAdd
+             }
   }
 };
 </script>
@@ -78,9 +84,7 @@ export default {
   color: white;
   /* border:1px solid red; */
 }
-.z_shop-top {
-  border: 1px solid red;
-}
+
 .z_shop-top img {
   width: 100%;
 }

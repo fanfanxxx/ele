@@ -142,10 +142,10 @@ export default {
  
   padding-top: 0.2rem;
   padding-bottom: 0.2rem;
- margin-left: 0.1rem;
+
 }
 .z_shop-bottom-intion{
-  width: 100%;
+  width: 3.75rem;
  overflow: hidden;
 }
 .z_shop-bottom-intion01,
@@ -156,6 +156,5 @@ export default {
   margin-top: 0.15rem;
   margin-bottom: 0.33rem;
   font-size: 0.14rem;
-  margin-left: 0.1rem;
 }
 </style>

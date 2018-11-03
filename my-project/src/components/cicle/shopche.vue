@@ -68,7 +68,7 @@ export default {
   box-sizing: border-box;
   /*border: 1px solid red;*/
   position: fixed;
-  bottom: 0.2rem;
+  bottom: 0rem;
   left: 0;
 }
 .z_base-shop {
