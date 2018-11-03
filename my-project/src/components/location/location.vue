@@ -17,12 +17,12 @@
         <span class="f_city_tip_left">当前定位城市</span>
         <span class="f_city_tip_right">定位不准时请在城市列表中选择</span>
       </div>
-      <a  class="f_guess_city" :href="'#/city/'+city.id">
+      <router-link tag="a"  class="f_guess_city" :to="'/city/'+city.id">
         <span>{{city.name}}</span>
         <span class="el-icon-arrow-right">
 
         </span>
-      </a>
+      </router-link>
     </nav>
     <section class="f_hot_city">
       <h4 class="f_hot_city_title citytitle">热门城市</h4>
@@ -58,8 +58,9 @@
     },
     created() {
       let ul ='https://elm.cangdu.org/v1/cities?type=guess';
-      this.$http.get(ul).then((res)=>{
-        this.city = res.data;
+      this.$http.get(ul).then((res1)=>{
+        console.log(res1.data);
+        this.city = res1.data;
       });
       let ur = 'https://elm.cangdu.org/v1/cities?type=hot';
       this.$http.get(ur).then((res) => {

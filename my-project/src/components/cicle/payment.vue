@@ -38,7 +38,7 @@
         </section>
         <section class="z_par-indent">
             <div class="z_par-indent01">
-               <p> <img style="width:0.4rem;" src="./imgs/1.jpeg" alt=""></p>
+               <p> <img style="width:0.4rem;" :src="'https://elm.cangdu.org/img/'+ shopAdd[0].foods[0].image_path" alt=""></p>
                 <p style="padding-top:0.1rem">{{arr.specs_name}}</p>
             </div>
             <ul class="z_par-indent02">
@@ -126,6 +126,9 @@ export default {
              yinde(){
               return this.$store.state.yinde
             },
+             shopAdd(){
+                    return this.$store.state.shopAdd
+             }
 
 
   }

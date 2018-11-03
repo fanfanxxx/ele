@@ -87,7 +87,7 @@
     },
     created() {
       var id = localStorage.getItem('id');
-      var url = 'https://elm.cangdu.org/promotion/v2/users/' + id + '15318/hongbaos?limit=20&offset=0';
+      var url = 'https://elm.cangdu.org/promotion/v2/users/' + id + '/hongbaos?limit=4&offset=0';
       this.$http.get(url).then((res) => {
         console.log(res.data);
         this.arr = res.data;

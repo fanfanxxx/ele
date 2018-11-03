@@ -2,8 +2,9 @@
   <div>
 
     <Head><span>{{msg}}</span></Head>
+    <Loginhome v-if="getmessage"></Loginhome>
 
-    <div v-if="!getmessage">
+    <div v-else>
       <section class="f_id">
         <a href="#/login" class="f_id_include">
           <span class="f_id_hair">
@@ -48,7 +49,7 @@
 
       </section>
     </div>
-    <Loginhome v-else></Loginhome>
+    
 
 
     <section class="f_ushome_center">
