@@ -1,7 +1,7 @@
 <template>
   <div class="h-shoplist">
     
-    <TopHeader class="h-listTop">{{title}}</TopHeader>
+    <TopHeader class="h-listTop">{{shoptitle1}}</TopHeader>
     
 
 
@@ -26,7 +26,7 @@
         message: '',
         myid: '',
         title:'',
-     
+         shoptitle1:''
       }
     },
     components: {
@@ -36,7 +36,8 @@
        
     },
     created() {
-     
+      //  console.log(localStorage.shoptitle,"dhddkddddddddd");
+      this.shoptitle1=localStorage.shoptitle;
       let api = "https://elm.cangdu.org/shopping/v2/restaurant/category";
       this.$http.get(api).then((data) => {
         // console.log("有数据了")
@@ -53,7 +54,7 @@
         console.log('123', this.shop);
        
       })
-      this.title=localStorage.getItem("keeptitle")
+      
     },
 
 

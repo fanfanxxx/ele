@@ -86,25 +86,25 @@
   .h-botton
   {
       width: 100%;
-      height: 0.6rem;
+      height: 0.4rem;
       display: flex;
       justify-content: flex-start;
       background-color: white;
   }
   .h-botton .h-link{
     width: 25%;
-    height: 0.6rem;
+    height: 0.4rem;
   }
   .h-link li img{
-      width: 50%;
-      margin-left: 25%;
-      margin-top: 0.1rem;
-      height: 0.3rem;
+      width: 30%;
+      margin-left: 35%;
+      margin-top: 0.06rem;
+      height: 0.2rem;
   }
   .h-link p{
     text-align: center;
     color: gray;
-    font-size: 0.14rem;
+    font-size: 0.1rem;
   }
  /* .router-link-active p{
      color:blue; 

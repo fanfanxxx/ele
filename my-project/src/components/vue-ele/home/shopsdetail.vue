@@ -244,7 +244,7 @@
     line-height: 0.4rem;
     /* border: 1px solid red; */
     margin-top: 0.1rem;
- 
+     padding-top: 0.05rem;
     color: #ff9900;
     text-align: center;
   }
@@ -255,10 +255,11 @@
     width: 40%;
     height: 0.4rem;
     line-height: 0.4rem;
-    font-size: 0.08rem;
+    font-size: 0.1rem;
     color: #666;
     /* border: 1px solid red; */
     margin-top: 0.1rem;
+    padding-top: 0.05rem;
   }
 
   .h-botton {

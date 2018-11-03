@@ -138,7 +138,6 @@
       },
       changeid(newid, oldid) {
         this.id = newid;
-        console.log(newid, "灌灌灌灌灌");
       },
       id() {
         let api = "https://elm.cangdu.org/shopping/restaurants?latitude=31.22967&longitude=121.4762";
@@ -251,18 +250,22 @@
     line-height: 0.4rem;
     /* border: 1px solid red; */
     margin-top: 0.1rem;
+     padding-top: 0.05rem;
     color: #ff9900;
     text-align: center;
   }
 
   .h-bills {
+    
+
     width: 40%;
     height: 0.4rem;
     line-height: 0.4rem;
-    font-size: 0.08rem;
+    font-size: 0.1rem;
     color: #666;
     /* border: 1px solid red; */
     margin-top: 0.1rem;
+    padding-top: 0.05rem;
   }
 
   .h-botton {

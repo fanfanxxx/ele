@@ -96,6 +96,7 @@
       // } 
 
       goParam: function (index, title) {
+        localStorage.shoptitle=title;
         this.index = index;
         this.title = title;
         this.$router.push({
@@ -105,7 +106,7 @@
             title: this.title
           }
         });
-        var keeptitle=localStorage.setItem('keeptitle',title);
+      
       },
     
     }
