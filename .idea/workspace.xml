@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="caaaf9bb-d40d-4f83-af37-75d1cbfbcf4c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/my-project/.babelrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/.postcssrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/build/build.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/build/check-versions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/build/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/build/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/build/vue-loader.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/build/webpack.base.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/build/webpack.dev.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/build/webpack.prod.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/config/dev.env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/config/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/config/prod.env.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/assets/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/ceshi.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/addlist.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/address.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/business-list.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/head.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/hello.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/1.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/14472493.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/20.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/22.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/23.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/25.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/26.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/27.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/29.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/3.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/30.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/31.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/32.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/34.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/35.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/36.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/37.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/38.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/39.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/4.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/40.jpg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/timg (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/imgs/timg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/list-top.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/payment.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/safe01.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/shopDetail.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/shopSafe.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/cicle/shopche.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/location/location.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/location/location1.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/alert.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/header.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/imgs/c1-减免.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/imgs/head.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/imgs/业务图标—省.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/imgs/分期商城.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/imgs/头像.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/imgs/女客服.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/imgs/已过期.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/imgs/手机.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/imgs/服务中心.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/imgs/王冠.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/imgs/电话.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/imgs/订单.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/imgs/饿了么.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/login.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/logined/loginhome.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/logined/wodeyouhui.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/messages/daijinquan.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/messages/download.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/messages/fuwuzhongxin.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/messages/hongbao/duihuan.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/messages/hongbao/hongbaoshuoming.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/messages/hongbao/lishihongbao.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/messages/hongbao/tuijian.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/messages/huiyuanzhongxin/duihuanhuiyuan.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/messages/huiyuanzhongxin/goumaijilu.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/messages/huiyuanzhongxin/huiyuan.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/messages/huiyuanzhongxin/huiyuanshuoming.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/messages/huiyuanzhongxin/zaixianzhifu.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/messages/huxinxi.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/messages/integral.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/messages/jifen.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/messages/money.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/messages/moneystate/fuwustate.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/messages/moneystate/integralstate.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/messages/moneystate/moneystate.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/messages/moneystate/quanshuoming.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/messages/shouhuodizhi.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/messages/soudizhi.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/messages/wodedingdan.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/messages/xinzengdizhi.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/messages/xiugainame.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/messages/youhui.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/setpassword.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/us/ushome.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/hfind.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/hmine.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/home/allshops.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/home/h-loading.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/home/header.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/home/himgs/img01.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/home/himgs/img02.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/home/himgs/img03.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/home/himgs/img04.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/home/himgs/img05.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/home/himgs/img06.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/home/himgs/img07.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/home/himgs/img08.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/home/himgs/img09.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/home/himgs/img10.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/home/himgs/img11.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/home/himgs/img12.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/home/himgs/img13.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/home/himgs/img14.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/home/himgs/img15.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/home/himgs/img6.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/home/himgs/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/home/himgs/search.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/home/shopsdetail.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/home/shopslist.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/home/top.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/home/xiala.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/home/zzs.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/hsearch.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/htakeout.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/htotal.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/imgs/duihao.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/imgs/elm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/imgs/elm1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/imgs/headimg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/imgs/huo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/imgs/jiage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/imgs/jiantou.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/imgs/juli.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/imgs/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/imgs/mine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/imgs/mine1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/imgs/niao.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/imgs/order.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/imgs/order1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/imgs/pingfen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/imgs/sj 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/imgs/sj2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/imgs/sousuo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/imgs/zhi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/imgs/zhi1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/components/vue-ele/imgs/zhong.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/lib/request.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/router/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/store/actions.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/store/getters.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/store/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/store/mutations.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/src/store/state.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/static/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/static/css/reset.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/static/imgs/himgs/duihao.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/static/imgs/himgs/elm.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/static/imgs/himgs/elm1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/static/imgs/himgs/headimg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/static/imgs/himgs/huo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/static/imgs/himgs/jiage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/static/imgs/himgs/jiantou.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/static/imgs/himgs/juli.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/static/imgs/himgs/loading.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/static/imgs/himgs/mine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/static/imgs/himgs/mine1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/static/imgs/himgs/niao.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/static/imgs/himgs/order.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/static/imgs/himgs/order1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/static/imgs/himgs/pingfen.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/static/imgs/himgs/sj 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/static/imgs/himgs/sj2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/static/imgs/himgs/sousuo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/static/imgs/himgs/zhi.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/static/imgs/himgs/zhi1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/static/imgs/himgs/zhong.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-project/static/js/resize.js" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-2012339581">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.file.types.open" />
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.file.types.edit" />
+    </session>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="311" />
+    <option name="y" value="23" />
+    <option name="width" value="1080" />
+    <option name="height" value="797" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="饿了吗项目本地库" type="b2602c69:ProjectViewProjectNode" />
+              <item name="饿了吗项目本地库" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="caaaf9bb-d40d-4f83-af37-75d1cbfbcf4c" name="Default Changelist" comment="" />
+      <created>1541246695688</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1541246695688</updated>
+      <workItem from="1541246700102" duration="475000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="475000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="311" y="23" width="1080" height="797" extended-state="0" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24929178" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+</project>
