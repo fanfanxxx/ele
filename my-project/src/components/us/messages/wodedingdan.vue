@@ -6,7 +6,7 @@
         {{msg}}
       </span>
     </Head>
-    <section class="f_top">
+    <section v-if="data[0]" class="f_top">
 
       <img :src="'https://elm.cangdu.org/img/'+data[0].image_path" alt="">
       <div class="f_right">
@@ -38,6 +38,7 @@
             <p>{{content}}</p>
             <div class="f_alert_submit" @click="bol=false">确认</div>
     </Alert>
+    <Htotal class="h-botton3"></Htotal>
   </div>
 
 </template>
@@ -47,6 +48,7 @@
 <script>
   import Head from '../header.vue'
   import Alert from '../alert.vue'
+  import Htotal from "../.././vue-ele/htotal.vue"
   export default {
     name: "wodedingdan",
     data() {
@@ -70,9 +72,13 @@
     },
     components: {
       Head,
-      Alert
+      Alert,
+      Htotal 
     },
     created(){
+      
+            this.$store.commit("fx");
+      
         var _this = this;
       var time = 900;
       clearInterval(timer);
@@ -184,6 +190,11 @@
       border-radius: 0.05rem;
 
   }
-
+  .h-botton3{
+        z-index:100;
+  position:fixed;
+  bottom: 0;
+  
+    }
 
 </style>

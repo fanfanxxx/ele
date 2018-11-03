@@ -61,7 +61,7 @@
     },
     mounted() {
       this.data = this.$route.params.id;
-      var url1 = "/v1/cities/" + this.data;
+      var url1 = "https://elm.cangdu.org/v1/cities/" + this.data;
       this.axios.get(url1).then((res) => {
         console.log('tag', res);
         this.city = res.data.name;

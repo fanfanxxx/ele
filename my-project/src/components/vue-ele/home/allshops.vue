@@ -232,12 +232,12 @@
     justify-content: space-around;
     height: 0.5rem;
     margin-top: 20px;
-    /* border: 1px solid blue; */
+   
   }
 
   .h-block {
-    margin-top: 0.1rem;
-    /* border: 1px solid blue; */
+    margin-top: 0.13rem;
+   
     width: 40%;
   }
 
@@ -247,20 +247,22 @@
 
   .h-point {
     width: 15%;
-    line-height: 0.5rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
     /* border: 1px solid red; */
-    margin-left: -25%;
+    margin-top: 0.1rem;
     color: #ff9900;
-    /* text-align: center */
+    text-align: center;
   }
 
   .h-bills {
-    margin-left: -15%;
     width: 40%;
-    line-height: 0.5rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
     font-size: 0.08rem;
     color: #666;
     /* border: 1px solid red; */
+    margin-top: 0.1rem;
   }
 
   .h-botton {
@@ -361,14 +363,15 @@
   .el-rate__item {
     margin-top: 0.1rem;
     width: 0.097rem;
+    margin-left: 0.04rem;
   }
 
   .el-rate__icon {
-    font-size: .1rem;
+    font-size: .08rem;
   }
 
   .el-rate__text {
-    font-size: 0.15rem;
+    font-size: 0.12rem;
   }
 
 

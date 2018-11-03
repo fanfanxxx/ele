@@ -17,7 +17,7 @@
         <span class="f_city_tip_left">当前定位城市</span>
         <span class="f_city_tip_right">定位不准时请在城市列表中选择</span>
       </div>
-      <a  class="f_guess_city" :href="'/#/city/'+city.id">
+      <a  class="f_guess_city" :href="'#/city/'+city.id">
         <span>{{city.name}}</span>
         <span class="el-icon-arrow-right">
 
