@@ -3,13 +3,15 @@
     <Header1>{{msg}}</Header1>
      <div class="h-scenter">
 
+    <div >
+
     
     <div class="h-input">
       <input v-model="inputval" class="foodinput" placeholder="搜索商家或食品">
      
       <div @click="searchfood" class="submit">提交</div>
     </div>
-
+  </div>
     <div class="main">
  <!-- //搜索到的东西 -->
  <div v-if="list!=''" class='search '>
@@ -107,7 +109,7 @@ import Htotal from "../vue-ele/htotal"
       this.list='';
 },
       removeall: function () {
-        // localStorage.clear();
+        localStorage.removeItem('his');
         this.his = "";
       }
 

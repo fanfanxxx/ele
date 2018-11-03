@@ -5,7 +5,7 @@
 
         
           <router-link to="/hsearch" class="h-top1">
-            <div><img src="../vue-ele/imgs/sousuo.png" alt=""></div>
+            <img src="../vue-ele/imgs/sousuo.png" alt="">
           </router-link>
           <router-link to="/home" class="h-top2">
             <p     class="topaddress" style="width: 100%;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">{{address}}</p>
@@ -87,14 +87,12 @@
   font-size: 0.17rem;
   margin-left: 10%;
 }
-.h-top1 div{
-  width: 100%;
-  height: 100%;;
-}
-.h-top1 div img{
-  width: 100%;
+
+.h-top1  img{
+  width: 80%;
+  height: 0.4rem;
   /* border: 1px solid red; */
-  margin-top: 25%;
+  margin-top: 30%;
   height: 50%;
   
   

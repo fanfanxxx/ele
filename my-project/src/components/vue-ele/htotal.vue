@@ -4,8 +4,8 @@
     <router-link  class="h-link" to="/htakeout">
       <ul  class="static">
           <div  @click="wm1">
-                <li v-show="value1"><img src="./imgs/elm.png" alt=""></li>
-                <li v-show="!value1"><img src="./imgs/elm1.png" alt=""></li>
+                <li v-show="value1"><img src="../../../static/imgs/himgs/elm.png" alt=""></li>
+                <li v-show="!value1"><img src="../../../static/imgs/himgs/elm1.png" alt=""></li>
           </div>
         <p>外卖</p>
       </ul>
@@ -13,9 +13,9 @@
 <router-link   class="h-link" :to="{name:'hsearch'}" >
     <ul class="static"  >
         <div @click="ss1">
-                <li v-show="value2"><img src="./imgs/zhi.png" alt=""></li>
+                <li v-show="value2"><img src="../../../static/imgs/himgs/zhi.png" alt=""></li>
 
-                 <li v-show="!value2"><img src="./imgs/zhi1.png" alt=""></li>
+                 <li v-show="!value2"><img src="../../../static/imgs/himgs/zhi1.png" alt=""></li>
         </div>  
         <p>搜索</p>
     </ul>
@@ -23,8 +23,8 @@
 <router-link  class="h-link" to="/order">
     <ul class="static" >
         <div @click="fx1">
-                <li v-show="value3"><img src="./imgs/order.png" alt=""></li>
-                <li  v-show="!value3"><img src="./imgs/order1.png" alt=""></li>
+                <li v-show="value3"><img src="../../../static/imgs/himgs/order.png" alt=""></li>
+                <li  v-show="!value3"><img src="../../../static/imgs/himgs/order1.png"alt=""></li>
         </div>
         
         
@@ -34,8 +34,8 @@
 <router-link  class="h-link" :to="{name:'hmine'}">
     <ul class="static" >
         <div @click="wd1">
-                <li v-show="value4"><img src="./imgs/mine.png" alt=""></li>
-                <li v-show="!value4"><img src="./imgs/mine1.png" alt=""></li>
+                <li v-show="value4"><img src="../../../static/imgs/himgs/mine.png" alt=""></li>
+                <li v-show="!value4"><img src="../../../static/imgs/himgs/mine1.png" alt=""></li>
         </div>
         
         <p>我的</p>
@@ -46,7 +46,7 @@
   </div>
 </template>
 <script>
-    import {mapState,mapMutations } from 'vuex'
+    import {mapState,mapMutations } from 'vuex' 
     export default{
         name:"htotal",
      data(){

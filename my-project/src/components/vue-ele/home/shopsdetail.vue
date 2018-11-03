@@ -211,7 +211,7 @@
     position: absolute;
     left: 32%;
     top: 0.05rem;
-    /* border: 1px solid red; */ 
+    /* border: 1px solid red;  */
     color: #333;
     padding-top: .01rem;
     font: .2rem/.2rem PingFangSC-Regular;
@@ -228,34 +228,42 @@
   }
 
   .h-block {
-    margin-top: 0.1rem;
+    margin-top: 0.13rem;
     /* border: 1px solid blue; */
-    width: 50%;
+    width: 40%;
   }
 
   .el-rate {
     width: 100%;
+   
   }
 
   .h-point {
-    width: 10%;
-    line-height: 0.5rem;
+    width: 15%;
+    height: 0.4rem;
+    line-height: 0.4rem;
     /* border: 1px solid red; */
-    margin-left: -5%;
+    margin-top: 0.1rem;
+ 
     color: #ff9900;
+    text-align: center;
   }
 
   .h-bills {
-    margin-left: 5%;
+    
+
     width: 40%;
-    line-height: 0.5rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
     font-size: 0.08rem;
     color: #666;
+    /* border: 1px solid red; */
+    margin-top: 0.1rem;
   }
 
   .h-botton {
     margin-top: 0.15rem;
-    /* border: 1px solid red; */
+ 
   }
 
   .h-botton span:nth-child(odd) {
@@ -348,15 +356,19 @@
 <style>
   .el-rate__item {
     margin-top: 0.1rem;
+    margin-left: 0.05rem;
     width: 0.097rem;
+    /* border: 1px solid green; */
   }
 
   .el-rate__icon {
-    font-size: .1rem;
+    font-size: .08rem;
+    /* border: 1px solid green; */
   }
 
   .el-rate__text {
-    font-size: 0.15rem;
+    font-size: 0.1rem;
+    /* border: 1px solid green; */
   }
 
 </style>
